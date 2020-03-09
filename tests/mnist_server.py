@@ -17,7 +17,7 @@ if __name__ == '__main__':
         GeneticCnnIndividual, size=20, crossover_rate=0.3, mutation_rate=0.1,
         additional_parameters={
             'kfold': 5, 'epochs': (20, 4, 1), 'learning_rate': (1e-3, 1e-4, 1e-5), 'batch_size': 32
-        }, maximize=True, host='223.195.37.85', user='vip', password='vip5191'
+        }, maximize=True, host='223.195.37.85', user='test', password='test'
     )
     ga = RussianRouletteGA(pop, crossover_probability=0.2, mutation_probability=0.8)
     ga.run(50)
