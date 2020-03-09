@@ -27,5 +27,5 @@ if __name__ == '__main__':
     x_train = train_images.reshape(n, 28, 28, 1)[selection]
     x_train = x_train / 255  # Normalize train data
 
-    gc = GentunClient(GeneticCnnIndividual, x_train, y_train, host='223.195.37.85', user='vip', password='vip5191')
+    gc = GentunClient(GeneticCnnIndividual, x_train, y_train, host='223.195.37.85', user='test', password='test')
     gc.work()
