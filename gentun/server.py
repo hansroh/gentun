@@ -21,16 +21,16 @@ class RpcClient(object):
     """
 
     def __init__(self, jobs, responses, host='localhost', port=5672,
-                 user='guest', password='guest', rabbit_queue='rpc_queue'):
+                 user='test', password='test', rabbit_queue='rpc_queue'):
         # Set connection and channel
         self.credentials = pika.PlainCredentials(user, password)
         self.parameters = pika.ConnectionParameters(host, port, '/', self.credentials)
         self.connection = pika.BlockingConnection(self.parameters)
         self.channel = self.connection.channel()
         # Set queue for jobs and callback queue for responses
-        result = self.channel.queue_declare(exclusive=True)
+        result = self.channel.queue_declare(queue='', exclusive=True)
         self.callback_queue = result.method.queue
-        self.channel.basic_consume(self.on_response, no_ack=True, queue=self.callback_queue)
+        self.channel.basic_consume(queue=self.callback_queue, on_message_callback=self.on_response, auto_ack=True)
         self.rabbit_queue = rabbit_queue
         self.channel.queue_declare(queue=self.rabbit_queue)
         self.response = None
@@ -87,7 +87,7 @@ class DistributedPopulation(Population):
 
     def __init__(self, species, x_train=None, y_train=None, individual_list=None, size=None,
                  crossover_rate=0.5, mutation_rate=0.015, maximize=True, additional_parameters=None,
-                 host='localhost', port=5672, user='guest', password='guest', rabbit_queue='rpc_queue'):
+                 host='localhost', port=5672, user='test', password='test', rabbit_queue='rpc_queue'):
         super(DistributedPopulation, self).__init__(
             species, x_train, y_train, individual_list, size,
             crossover_rate, mutation_rate, maximize, additional_parameters
@@ -136,7 +136,7 @@ class DistributedGridPopulation(DistributedPopulation, GridPopulation):
 
     def __init__(self, species, x_train=None, y_train=None, individual_list=None, genes_grid=None,
                  crossover_rate=0.5, mutation_rate=0.015, maximize=True, additional_parameters=None,
-                 host='localhost', port=5672, user='guest', password='guest', rabbit_queue='rpc_queue'):
+                 host='localhost', port=5672, user='test', password='test', rabbit_queue='rpc_queue'):
         # size parameter of DistributedPopulation is replaced with genes_grid
         super(DistributedGridPopulation, self).__init__(
             species, x_train, y_train, individual_list, genes_grid,
