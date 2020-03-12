@@ -10,6 +10,7 @@ from keras.layers import Input, Conv2D, Activation, Add, MaxPooling2D, Flatten, 
 from keras.optimizers import Adam
 from keras.models import Model
 from sklearn.model_selection import StratifiedKFold
+from keras.utils import multi_gpu_model
 
 from .generic_models import GentunModel
 
@@ -25,6 +26,14 @@ class GeneticCnnModel(GentunModel):
             genes, nodes, input_shape, kernels_per_layer, kernel_sizes,
             dense_units, dropout_probability, classes
         )
+        # support for multi-gpus
+        try:
+            self.parallel_model = multi_gpu_model(self.model, gpus=2)
+            print("Training using multiple GPUs..")
+        except ValueError:
+            self.parallel_model = self.model
+            print("Training using single GPU..")
+
         self.name = '-'.join(gene for gene in genes.values())
         self.kfold = kfold
         if type(epochs) is int and type(learning_rate) is int:
@@ -135,9 +144,9 @@ class GeneticCnnModel(GentunModel):
             self.reset_weights()
             for epochs, learning_rate in zip(self.epochs, self.learning_rate):
                 print("Training {} epochs with learning rate {}".format(epochs, learning_rate))
-                self.model.compile(optimizer=Adam(lr=learning_rate), loss='binary_crossentropy', metrics=['accuracy'])
-                self.model.fit(
+                self.parallel_model.compile(optimizer=Adam(lr=learning_rate), loss='binary_crossentropy', metrics=['accuracy'])
+                self.parallel_model.fit(
                     self.x_train[train], self.y_train[train], epochs=epochs, batch_size=self.batch_size, verbose=1
                 )
-            acc += self.model.evaluate(self.x_train[validation], self.y_train[validation], verbose=0)[1] / self.kfold
+            acc += self.parallel_model.evaluate(self.x_train[validation], self.y_train[validation], verbose=0)[1] / self.kfold
         return acc
