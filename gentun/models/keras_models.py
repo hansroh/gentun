@@ -133,6 +133,7 @@ class GeneticCnnModel(GentunModel):
             if hasattr(layer, 'kernel_initializer'):
                 layer.kernel.initializer.run(session=session)
 
+
     def cross_validate(self):
         """Train model using k-fold cross validation and
         return mean value of the validation accuracy.
