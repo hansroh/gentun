@@ -282,3 +282,214 @@ class GeneticCnnIndividual(Individual):
             if new_connections != connections:
                 self.set_fitness(None)  # A mutation means the individual has to be re-evaluated
                 self.get_genes()[name] = new_connections
+
+class CrowIndividual(object):
+    """Basic definition of an individual containing
+    reproduction and mutation methods. Do not instantiate,
+    use a subclass which extends this object by defining a
+    genome and a random individual generator.
+    """
+
+    def __init__(self, x_train, y_train, flight_length=13,awareness_probability=0.15,space=None, location=None, memory=None,nodes=(3, 5),
+                 input_shape=(28, 28, 1), kernels_per_layer=(20, 50), kernel_sizes=((5, 5), (5, 5)), dense_units=500,
+                 dropout_probability=0.5, classes=10, kfold=5, epochs=(3,), learning_rate=(1e-3,), batch_size=32):
+
+
+        if space is None:
+            space = {'S_{}'.format(i + 1): int(K_s * (K_s - 1) / 2) for i, K_s in enumerate(nodes)}
+        if location is None:
+            location = self.fly_random_location(space)
+        if memory is None:
+            memory=location
+
+        self.flight_length=flight_length
+        self.awareness_probability=awareness_probability
+        # Set individual's attributes
+        self.x_train = x_train
+        self.y_train = y_train
+        self.space = space
+        self.validate_space()
+        self.location = location
+        self.memory=memory
+        self.validate_location()
+        self.validate_memory()
+        self.fitness = None  # Until evaluated an individual fitness is unknown
+        # assert additional_parameters is None
+
+        # Set additional parameters which are not tuned
+        assert len(nodes) == len(kernels_per_layer) and len(kernels_per_layer) == len(kernel_sizes)
+        self.nodes = nodes
+        self.input_shape = input_shape
+        self.kernels_per_layer = kernels_per_layer
+        self.kernel_sizes = kernel_sizes
+        self.dense_units = dense_units
+        self.dropout_probability = dropout_probability
+        self.classes = classes
+        self.kfold = kfold
+        self.epochs = epochs
+        self.learning_rate = learning_rate
+        self.batch_size = batch_size
+
+    def validate_space(self):
+        """Check genome structure."""
+        if type(self.space) != dict:
+            raise TypeError("Space Coordinates must be a dictionary.")
+        for gene, properties in self.space.items():
+            if type(gene) != str:
+                raise TypeError("Space Coordinate names must be strings.")
+
+    def validate_location(self):
+        """Check that genes are compatible with genome."""
+        if set(self.space.keys()) != set(self.location.keys()):
+            raise ValueError("Location passed don't correspond to individual's space.")
+
+    def validate_memory(self):
+        """Check that genes are compatible with genome."""
+        if set(self.space.keys()) != set(self.memory.keys()):
+            raise ValueError("Memory passed don't correspond to individual's space.")
+
+    def get_location(self):
+        """Return individual's genes."""
+        return self.location
+
+    def get_memory(self):
+        """Return individual's genes."""
+        return self.memory
+
+    def get_space(self):
+        """Return individual's genome."""
+        return self.space
+
+    @staticmethod
+    def fly_random_location(genome):
+        """Create and return random genes."""
+        location = {}
+        for name, connections in genome.items():
+            location[name] = ''.join([random.choice(['0', '1']) for _ in range(connections)])
+        return location
+
+    def evaluate_fitness(self):
+        """Create model and perform cross-validation."""
+        model = GeneticCnnModel(
+            self.x_train, self.y_train, self.location, self.nodes, self.input_shape, self.kernels_per_layer,
+            self.kernel_sizes, self.dense_units, self.dropout_probability, self.classes,
+            self.kfold, self.epochs, self.learning_rate, self.batch_size
+        )
+        self.fitness = model.cross_validate()
+
+    def get_additional_parameters(self):
+        return {
+            'nodes': self.nodes,
+            'input_shape': self.input_shape,
+            'kernels_per_layer': self.kernels_per_layer,
+            'kernel_sizes': self.kernel_sizes,
+            'dense_units': self.dense_units,
+            'dropout_probability': self.dropout_probability,
+            'classes': self.classes,
+            'kfold': self.kfold,
+            'epochs': self.epochs,
+            'learning_rate': self.learning_rate,
+            'batch_size': self.batch_size
+        }
+
+
+    def get_fitness(self):
+        """Compute individual's fitness if necessary and return it."""
+        if self.fitness is None:
+            self.evaluate_fitness()
+        return self.fitness
+
+    def follow(self,crow):
+        assert self.__class__ == crow.__class__  # Can only reproduce if they're the same species
+
+        if random.random() < self.awareness_probability:
+            bin_xi="".join([self.get_location()[stage] for stage in self.get_location().keys()])
+            bin_mj = "".join([crow.get_memory()[stage] for stage in crow.get_memory().keys()])
+            diff = int(bin_mj, 2) - int(bin_xi, 2)
+            bin_diff = str(bin(diff >> 1) + str(diff & 1)).replace("b", "")
+
+            fl = random.randrange(0, self.flight_length, 1)
+            index = random.sample(range(0, 14), fl)
+
+            bin_distance = ""
+            for i, c in enumerate(bin_xi):
+                if i in index:
+                    bin_distance += bin_diff[i]
+                else:
+                    bin_distance += "0"
+
+            int_xiplus1 = int(bin_xi, 2) + int(bin_distance, 2)
+            bin_xiplus1 = str(bin(int_xiplus1 >> 1) + str(int_xiplus1 & 1)).replace("b", "")
+            if len(bin_xiplus1) > len(bin_xi):
+                len_diff = len(bin_xiplus1) - len(bin_xi)
+                bin_xiplus1 = bin_xiplus1[len_diff:]
+
+            new_location = {}
+            last=0
+            for name, connections in self.space.items():
+                end=last+connections
+                new_location[name] = bin_xiplus1[last:end]
+                last=end
+        else:
+            new_location = self.fly_random_location(self.space)
+
+        return self.__class__(
+            self.x_train, self.y_train, self.space, new_location,self.memory, **self.get_additional_parameters()
+        )
+
+    def get_fitness_status(self):
+        """Return True if individual's fitness in known."""
+        return self.fitness is not None
+
+    def set_fitness(self, value):
+        """Assign fitness."""
+        self.fitness = value
+
+    def copy(self):
+        """Copy instance."""
+        individual_copy = self.__class__(
+            self.x_train, self.y_train, self.space.copy(),self.location.copy(), self.memory.copy(), **self.get_additional_parameters()
+        )
+        individual_copy.set_fitness(self.fitness)
+        return individual_copy
+
+    def __str__(self):
+        """Return genes which identify the individual."""
+        return pprint.pformat(self.location)
+
+
+if __name__=="__main__":
+
+    gene1 = {"S_1":"010","S_2":"1001001001"}
+    gene2 = {"S_1":"101","S_2":"1011011011"}
+
+
+    string1="".join([gene1[stage] for stage in gene1.keys()])
+    string2="".join([gene2[stage] for stage in gene2.keys()])
+    print(string1)
+    print(string1[0:3])
+    exit()
+    diff=int(string2,2)-int(string1,2)
+    bindiff=str(bin(diff >> 1) + str(diff & 1)).replace("b","")
+    fl=random.randint(0,13)
+    index=random.sample(range(0,14),fl)
+    print(index)
+    print(string2)
+    print(string1)
+    print(bindiff)
+    print(len(bindiff),len(string1))
+
+    string3=""
+    for i,c in enumerate(string1):
+        if i in index:
+            string3+=bindiff[i]
+        else:
+            string3+="0"
+    print(string3)
+
+    new_int=int(string1,2)+int(string3,2)
+    new_bin = str(bin(new_int >> 1) + str(new_int & 1)).replace("b", "")
+    if len(new_bin)>len(string1):
+        len_diff=len(new_bin)-len(string1)
+        new_bin=new_bin[len_diff:]
+    print(new_bin)

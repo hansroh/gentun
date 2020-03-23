@@ -11,7 +11,7 @@ import threading
 import time
 import uuid
 
-from .populations import Population, GridPopulation
+from .populations import Population, Flock,GridPopulation
 
 
 class RpcClient(object):
@@ -116,6 +116,57 @@ class DistributedPopulation(Population):
         for i, individual in enumerate(self.individuals):
             if not individual.get_fitness_status():
                 job_order = json.dumps([i, individual.get_genes(), individual.get_additional_parameters()])
+                jobs.put(True)
+                client = RpcClient(jobs, responses, **self.credentials)
+                communication_thread = threading.Thread(target=client.call, args=[job_order])
+                communication_thread.daemon = True
+                communication_thread.start()
+        jobs.join()  # Block here until all jobs are completed
+        # Collect results and assign them to their respective individuals
+        while not responses.empty():
+            response = responses.get(False)
+            i, value = json.loads(response)
+            self.individuals[i].set_fitness(value)
+
+
+class DistributedFlock(Flock):
+    """Override Population class by making x_train and
+    y_train optional parameters set to None and sending
+    evaluation requests to the workers before computing
+    the fittest individual.
+    """
+
+    def __init__(self, species, x_train=None, y_train=None, input_shape=(28,28,1),nb_classes=10,individual_list=None, size=None,
+                 flight_length=13,awareness_probability=0.15, maximize=True, additional_parameters=None,
+                 host='localhost', port=5672, user='test', password='test', rabbit_queue='rpc_queue'):
+        super(DistributedFlock, self).__init__(
+            species, x_train, y_train, input_shape,nb_classes,individual_list, size,
+            flight_length,awareness_probability, maximize, additional_parameters
+        )
+        self.credentials = {
+            'host': host,
+            'port': port,
+            'user': user,
+            'password': password,
+            'rabbit_queue': rabbit_queue
+        }
+
+    def get_fittest(self):
+        """Evaluate necessary individuals in parallel before getting fittest."""
+        self.evaluate_in_parallel()
+        return super(DistributedFlock, self).get_fittest()
+
+    def evaluate_in_parallel(self):
+        """Send job requests to RabbitMQ pool so that
+        workers evaluate individuals with unknown fitness.
+        """
+        # Purge job queue if necessary
+        RpcClient(None, None, **self.credentials).purge()
+        jobs = queue.Queue()  # "Counter" of pending jobs, shared between threads
+        responses = queue.Queue()  # Collect fitness values from workers
+        for i, individual in enumerate(self.individuals):
+            if not individual.get_fitness_status():
+                job_order = json.dumps([i, individual.get_space(), individual.get_additional_parameters()])
                 jobs.put(True)
                 client = RpcClient(jobs, responses, **self.credentials)
                 communication_thread = threading.Thread(target=client.call, args=[job_order])
