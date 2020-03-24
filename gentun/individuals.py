@@ -400,6 +400,7 @@ class CrowIndividual(object):
     def get_fitness(self):
         """Compute individual's fitness if necessary and return it."""
         # if self.fitness is None:
+        #Hello
         self.evaluate_fitness()
         return self.fitness
 
