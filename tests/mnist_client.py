@@ -60,5 +60,5 @@ if __name__ == '__main__':
     else:
         raise Exception("Only Genetic Algorithm and Crow Search Algorithm are supported")
 
-    gc = GentunClient(individual, args.algorithm, x_train, y_train, host='223.195.37.85', user='test', password='test')
+    gc = GentunClient(individual, args.algorithm,x_train, y_train, host='223.195.37.84', user='test', password='test')
     gc.work()
