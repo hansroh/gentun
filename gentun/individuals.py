@@ -410,7 +410,13 @@ class CrowIndividual(object):
             bin_xi="".join([self.get_location()[stage] for stage in self.get_location().keys()])
             bin_mj = "".join([crow.get_memory()[stage] for stage in crow.get_memory().keys()])
             diff = int(bin_mj, 2) - int(bin_xi, 2)
+            if diff<0:
+                diff=diff*-1
             bin_diff = str(bin(diff >> 1) + str(diff & 1)).replace("b", "")
+
+            if len(bin_diff)<len(bin_xi):
+                for i in range(len(bin_xi)-len(bin_diff)):
+                    bin_diff="0"+bin_diff
 
             fl = random.randrange(0, self.flight_length, 1)
             index = random.sample(range(0, 14), fl)
