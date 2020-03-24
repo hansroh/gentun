@@ -45,7 +45,7 @@ if __name__ == '__main__':
         flock = DistributedFlock(
             CrowIndividual, input_shape=input_shape,nb_classes=nb_classes,size=5, flight_length=13, awareness_probability=0.15,
             additional_parameters={
-                'kfold': 5, 'epochs': (20, 4, 1), 'learning_rate': (1e-3, 1e-4, 1e-5), 'batch_size': 32
+                'kfold': 3, 'epochs': (20, 4, 1), 'learning_rate': (1e-3, 1e-4, 1e-5), 'batch_size': 32
             }, maximize=True, host='localhost', user='test', password='test'
         )
         csa = CrowSearchAlgorithm(flock)
