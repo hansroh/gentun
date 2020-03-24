@@ -33,7 +33,7 @@ if __name__ == '__main__':
     if args.algorithm=="ga":
 
         pop = DistributedPopulation(
-            GeneticCnnIndividual, input_shape=input_shape,nb_classes=nb_classes,size=4, crossover_rate=0.3, mutation_rate=0.1,
+            GeneticCnnIndividual, input_shape=input_shape,nb_classes=nb_classes,size=5, crossover_rate=0.3, mutation_rate=0.1,
             additional_parameters={
                 'kfold': 5, 'epochs': (20, 4, 1), 'learning_rate': (1e-3, 1e-4, 1e-5), 'batch_size': 32
             }, maximize=True, host='localhost', user='test', password='test'

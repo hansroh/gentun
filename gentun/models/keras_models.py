@@ -151,3 +151,5 @@ class GeneticCnnModel(GentunModel):
                 )
             acc += self.parallel_model.evaluate(self.x_train[validation], self.y_train[validation], verbose=0)[1] / self.kfold
         return acc
+
+
