@@ -314,6 +314,7 @@ class CrowIndividual(object):
         self.validate_location()
         self.validate_memory()
         self.fitness = None  # Until evaluated an individual fitness is unknown
+        self.best_fitness = None
         # assert additional_parameters is None
 
         # Set additional parameters which are not tuned
@@ -376,6 +377,9 @@ class CrowIndividual(object):
             self.kfold, self.epochs, self.learning_rate, self.batch_size
         )
         self.fitness = model.cross_validate()
+        if self.best_fitness==None or self.best_fitness < self.fitness:
+            self.memory=self.location
+            self.best_fitness=self.fitness
 
     def get_additional_parameters(self):
         return {
@@ -424,18 +428,13 @@ class CrowIndividual(object):
                 len_diff = len(bin_xiplus1) - len(bin_xi)
                 bin_xiplus1 = bin_xiplus1[len_diff:]
 
-            new_location = {}
             last=0
             for name, connections in self.space.items():
                 end=last+connections
-                new_location[name] = bin_xiplus1[last:end]
+                self.location[name] = bin_xiplus1[last:end]
                 last=end
         else:
-            new_location = self.fly_random_location(self.space)
-
-        return self.__class__(
-            self.x_train, self.y_train, self.space, new_location,self.memory, **self.get_additional_parameters()
-        )
+            self.location = self.fly_random_location(self.space)
 
     def get_fitness_status(self):
         """Return True if individual's fitness in known."""
@@ -448,7 +447,7 @@ class CrowIndividual(object):
     def copy(self):
         """Copy instance."""
         individual_copy = self.__class__(
-            self.x_train, self.y_train, self.space.copy(),self.location.copy(), self.memory.copy(), **self.get_additional_parameters()
+            self.x_train, self.y_train, self.flight_length,self.awareness_probability, self.space.copy(),self.location.copy(), self.memory.copy(), **self.get_additional_parameters()
         )
         individual_copy.set_fitness(self.fitness)
         return individual_copy
