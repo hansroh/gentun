@@ -7,7 +7,7 @@ import itertools
 import operator
 
 
-class Population(object):
+class  Population(object):
     """Group of individuals of the same species, that is,
     with the same genome. Can be initialized either with a
     list of individuals or a population size so that
@@ -53,6 +53,67 @@ class Population(object):
 
     def get_size(self):
         return self.population_size
+
+    def get_fittest(self):
+        if self.maximize:
+            return max(self.individuals, key=operator.methodcaller('get_fitness'))
+        return min(self.individuals, key=operator.methodcaller('get_fitness'))
+
+    def get_data(self):
+        return self.x_train, self.y_train
+
+    def get_fitness_criteria(self):
+        return self.maximize
+
+    def __getitem__(self, item):
+        return self.individuals[item]
+
+
+class  Flock(object):
+    """Group of individuals of the same species, that is,
+    with the same genome. Can be initialized either with a
+    list of individuals or a population size so that
+    random individuals are created. The get_fittest method
+    returns the strongest individual.
+    """
+
+    def __init__(self, species, x_train, y_train, input_shape, nb_classes,individual_list=None, size=None,
+                 flight_length=13, awareness_probability=0.15, maximize=True,
+                 additional_parameters=None):
+        self.x_train = x_train
+        self.y_train = y_train
+        self.input_shape=input_shape
+        self.nb_classes=nb_classes
+        self.species = species
+        self.maximize = maximize
+        if individual_list is None and size is None:
+            raise ValueError("Either pass a list of individuals or a population size for a random population.")
+        elif individual_list is None:
+            if additional_parameters is None:
+                additional_parameters = {}
+            self.flock_size = size
+            self.individuals = [
+                self.species(
+                    self.x_train, self.y_train, flight_length,awareness_probability,input_shape=self.input_shape, classes=self.nb_classes,**additional_parameters
+                )
+                for _ in range(size)
+            ]
+            print("Initializing a random population. Size: {}".format(size))
+        else:
+            assert all([type(individual) is self.species for individual in individual_list])
+            self.flock_size = len(individual_list)
+            self.individuals = individual_list
+
+    def add_individual(self, individual):
+        assert type(individual) is self.species
+        self.individuals.append(individual)
+        self.flock_size += 1
+
+    def get_species(self):
+        return self.species
+
+    def get_size(self):
+        return self.flock_size
 
     def get_fittest(self):
         if self.maximize:

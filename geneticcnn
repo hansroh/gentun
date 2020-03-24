@@ -1,0 +1,674 @@
+Evaluating generation #1...
+ [*] Got fitness for individual 0
+ [*] Got fitness for individual 1
+ [*] Got fitness for individual 2
+ [*] Got fitness for individual 3
+ [*] Got fitness for individual 4
+ [*] Got fitness for individual 5
+ [*] Got fitness for individual 6
+ [*] Got fitness for individual 7
+ [*] Got fitness for individual 9
+ [*] Got fitness for individual 8
+ [*] Got fitness for individual 11
+ [*] Got fitness for individual 10
+ [*] Got fitness for individual 12
+ [*] Got fitness for individual 13
+ [*] Got fitness for individual 14
+ [*] Got fitness for individual 15
+ [*] Got fitness for individual 17
+ [*] Got fitness for individual 16
+ [*] Got fitness for individual 18
+ [*] Got fitness for individual 19
+Fittest individual is:
+{'S_1': '000', 'S_2': '0001011101'}
+Fitness value is: 0.9155
+
+Evaluating generation #2...
+ [*] Got fitness for individual 4
+ [*] Got fitness for individual 6
+ [*] Got fitness for individual 1
+ [*] Got fitness for individual 5
+ [*] Got fitness for individual 2
+ [*] Got fitness for individual 9
+ [*] Got fitness for individual 10
+Fittest individual is:
+{'S_1': '000', 'S_2': '0001011101'}
+Fitness value is: 0.9155
+
+Evaluating generation #3...
+ [*] Got fitness for individual 4
+ [*] Got fitness for individual 7
+ [*] Got fitness for individual 6
+ [*] Got fitness for individual 1
+ [*] Got fitness for individual 0
+ [*] Got fitness for individual 10
+Fittest individual is:
+{'S_1': '000', 'S_2': '0001011101'}
+Fitness value is: 0.9155
+
+Evaluating generation #4...
+ [*] Got fitness for individual 1
+ [*] Got fitness for individual 2
+ [*] Got fitness for individual 0
+ [*] Got fitness for individual 6
+ [*] Got fitness for individual 3
+ [*] Got fitness for individual 8
+ [*] Got fitness for individual 9
+ [*] Got fitness for individual 10
+Fittest individual is:
+{'S_1': '000', 'S_2': '0001011101'}
+Fitness value is: 0.9155
+
+Evaluating generation #5...
+ [*] Got fitness for individual 2
+ [*] Got fitness for individual 4
+ [*] Got fitness for individual 1
+ [*] Got fitness for individual 5
+ [*] Got fitness for individual 0
+ [*] Got fitness for individual 6
+ [*] Got fitness for individual 8
+ [*] Got fitness for individual 7
+ [*] Got fitness for individual 9
+ [*] Got fitness for individual 10
+Fittest individual is:
+{'S_1': '000', 'S_2': '0010001010'}
+Fitness value is: 0.9163
+
+Evaluating generation #6...
+ [*] Got fitness for individual 2
+ [*] Got fitness for individual 0
+ [*] Got fitness for individual 3
+ [*] Got fitness for individual 4
+ [*] Got fitness for individual 7
+ [*] Got fitness for individual 5
+ [*] Got fitness for individual 6
+ [*] Got fitness for individual 9
+Fittest individual is:
+{'S_1': '000', 'S_2': '0010001010'}
+Fitness value is: 0.9163
+
+Evaluating generation #7...
+ [*] Got fitness for individual 3
+ [*] Got fitness for individual 4
+ [*] Got fitness for individual 5
+ [*] Got fitness for individual 6
+ [*] Got fitness for individual 1
+ [*] Got fitness for individual 2
+ [*] Got fitness for individual 7
+ [*] Got fitness for individual 8
+Fittest individual is:
+{'S_1': '000', 'S_2': '1011011000'}
+Fitness value is: 0.9152
+
+Evaluating generation #8...
+ [*] Got fitness for individual 1
+ [*] Got fitness for individual 6
+ [*] Got fitness for individual 7
+ [*] Got fitness for individual 2
+ [*] Got fitness for individual 0
+ [*] Got fitness for individual 5
+ [*] Got fitness for individual 10
+ [*] Got fitness for individual 9
+Fittest individual is:
+{'S_1': '000', 'S_2': '0001010000'}
+Fitness value is: 0.9159
+
+Evaluating generation #9...
+ [*] Got fitness for individual 1
+ [*] Got fitness for individual 3
+ [*] Got fitness for individual 5
+ [*] Got fitness for individual 2
+ [*] Got fitness for individual 4
+ [*] Got fitness for individual 8
+ [*] Got fitness for individual 10
+ [*] Got fitness for individual 9
+Fittest individual is:
+{'S_1': '000', 'S_2': '1110011010'}
+Fitness value is: 0.9158
+
+Evaluating generation #10...
+ [*] Got fitness for individual 4
+ [*] Got fitness for individual 6
+ [*] Got fitness for individual 9
+ [*] Got fitness for individual 2
+ [*] Got fitness for individual 1
+ [*] Got fitness for individual 5
+ [*] Got fitness for individual 3
+ [*] Got fitness for individual 10
+Fittest individual is:
+{'S_1': '000', 'S_2': '1011011000'}
+Fitness value is: 0.9167
+
+Evaluating generation #11...
+ [*] Got fitness for individual 0
+ [*] Got fitness for individual 7
+ [*] Got fitness for individual 1
+ [*] Got fitness for individual 5
+ [*] Got fitness for individual 4
+ [*] Got fitness for individual 6
+ [*] Got fitness for individual 8
+ [*] Got fitness for individual 9
+ [*] Got fitness for individual 10
+Fittest individual is:
+{'S_1': '000', 'S_2': '1011011000'}
+Fitness value is: 0.9167
+
+Evaluating generation #12...
+ [*] Got fitness for individual 4
+ [*] Got fitness for individual 2
+ [*] Got fitness for individual 1
+ [*] Got fitness for individual 7
+ [*] Got fitness for individual 3
+ [*] Got fitness for individual 8
+ [*] Got fitness for individual 9
+Fittest individual is:
+{'S_1': '000', 'S_2': '1111011000'}
+Fitness value is: 0.9152
+
+Evaluating generation #13...
+ [*] Got fitness for individual 6
+ [*] Got fitness for individual 2
+ [*] Got fitness for individual 4
+ [*] Got fitness for individual 3
+ [*] Got fitness for individual 5
+ [*] Got fitness for individual 7
+ [*] Got fitness for individual 8
+ [*] Got fitness for individual 9
+ [*] Got fitness for individual 10
+Fittest individual is:
+{'S_1': '000', 'S_2': '1111011100'}
+Fitness value is: 0.9164
+
+Evaluating generation #14...
+ [*] Got fitness for individual 2
+ [*] Got fitness for individual 1
+ [*] Got fitness for individual 4
+ [*] Got fitness for individual 3
+ [*] Got fitness for individual 6
+ [*] Got fitness for individual 7
+ [*] Got fitness for individual 10
+ [*] Got fitness for individual 9
+Fittest individual is:
+{'S_1': '000', 'S_2': '1111011000'}
+Fitness value is: 0.9161
+
+Evaluating generation #15...
+ [*] Got fitness for individual 0
+ [*] Got fitness for individual 2
+ [*] Got fitness for individual 3
+ [*] Got fitness for individual 1
+ [*] Got fitness for individual 4
+ [*] Got fitness for individual 5
+ [*] Got fitness for individual 6
+ [*] Got fitness for individual 8
+ [*] Got fitness for individual 9
+ [*] Got fitness for individual 10
+Fittest individual is:
+{'S_1': '000', 'S_2': '1011010000'}
+Fitness value is: 0.9167
+
+Evaluating generation #16...
+ [*] Got fitness for individual 2
+ [*] Got fitness for individual 4
+ [*] Got fitness for individual 1
+ [*] Got fitness for individual 3
+ [*] Got fitness for individual 5
+ [*] Got fitness for individual 6
+ [*] Got fitness for individual 9
+ [*] Got fitness for individual 10
+Fittest individual is:
+{'S_1': '000', 'S_2': '1101011100'}
+Fitness value is: 0.9161
+
+Evaluating generation #17...
+ [*] Got fitness for individual 1
+ [*] Got fitness for individual 4
+ [*] Got fitness for individual 3
+ [*] Got fitness for individual 0
+ [*] Got fitness for individual 5
+ [*] Got fitness for individual 6
+ [*] Got fitness for individual 8
+ [*] Got fitness for individual 9
+ [*] Got fitness for individual 10
+Fittest individual is:
+{'S_1': '000', 'S_2': '0010001111'}
+Fitness value is: 0.9172
+
+Evaluating generation #18...
+ [*] Got fitness for individual 5
+ [*] Got fitness for individual 3
+ [*] Got fitness for individual 4
+ [*] Got fitness for individual 6
+ [*] Got fitness for individual 8
+ [*] Got fitness for individual 9
+ [*] Got fitness for individual 10
+Fittest individual is:
+{'S_1': '000', 'S_2': '0010001111'}
+Fitness value is: 0.9172
+
+Evaluating generation #19...
+ [*] Got fitness for individual 3
+ [*] Got fitness for individual 4
+ [*] Got fitness for individual 1
+ [*] Got fitness for individual 2
+ [*] Got fitness for individual 5
+ [*] Got fitness for individual 6
+ [*] Got fitness for individual 8
+ [*] Got fitness for individual 9
+Fittest individual is:
+{'S_1': '000', 'S_2': '0010001111'}
+Fitness value is: 0.9172
+
+Evaluating generation #20...
+ [*] Got fitness for individual 3
+ [*] Got fitness for individual 2
+ [*] Got fitness for individual 4
+ [*] Got fitness for individual 0
+ [*] Got fitness for individual 5
+ [*] Got fitness for individual 6
+ [*] Got fitness for individual 7
+ [*] Got fitness for individual 9
+ [*] Got fitness for individual 10
+Fittest individual is:
+{'S_1': '000', 'S_2': '1011010000'}
+Fitness value is: 0.9164
+
+Evaluating generation #21...
+ [*] Got fitness for individual 1
+ [*] Got fitness for individual 0
+ [*] Got fitness for individual 2
+ [*] Got fitness for individual 3
+ [*] Got fitness for individual 5
+ [*] Got fitness for individual 7
+ [*] Got fitness for individual 8
+ [*] Got fitness for individual 6
+Fittest individual is:
+{'S_1': '000', 'S_2': '1011010000'}
+Fitness value is: 0.9164
+
+Evaluating generation #22...
+ [*] Got fitness for individual 2
+ [*] Got fitness for individual 3
+ [*] Got fitness for individual 0
+ [*] Got fitness for individual 5
+ [*] Got fitness for individual 6
+ [*] Got fitness for individual 7
+ [*] Got fitness for individual 8
+ [*] Got fitness for individual 9
+ [*] Got fitness for individual 4
+Fittest individual is:
+{'S_1': '000', 'S_2': '1101010110'}
+Fitness value is: 0.9163
+
+Evaluating generation #23...
+ [*] Got fitness for individual 4
+ [*] Got fitness for individual 2
+ [*] Got fitness for individual 5
+ [*] Got fitness for individual 0
+ [*] Got fitness for individual 3
+ [*] Got fitness for individual 8
+ [*] Got fitness for individual 6
+ [*] Got fitness for individual 9
+ [*] Got fitness for individual 10
+Fittest individual is:
+{'S_1': '000', 'S_2': '0101110110'}
+Fitness value is: 0.9168
+
+Evaluating generation #24...
+ [*] Got fitness for individual 1
+ [*] Got fitness for individual 2
+ [*] Got fitness for individual 3
+ [*] Got fitness for individual 0
+ [*] Got fitness for individual 4
+ [*] Got fitness for individual 5
+ [*] Got fitness for individual 8
+ [*] Got fitness for individual 6
+ [*] Got fitness for individual 7
+ [*] Got fitness for individual 9
+ [*] Got fitness for individual 10
+Fittest individual is:
+{'S_1': '000', 'S_2': '0101110110'}
+Fitness value is: 0.9168
+
+Evaluating generation #25...
+ [*] Got fitness for individual 1
+ [*] Got fitness for individual 10
+ [*] Got fitness for individual 5
+ [*] Got fitness for individual 8
+Fittest individual is:
+{'S_1': '000', 'S_2': '0101110110'}
+Fitness value is: 0.9168
+
+Evaluating generation #26...
+ [*] Got fitness for individual 4
+ [*] Got fitness for individual 0
+ [*] Got fitness for individual 1
+ [*] Got fitness for individual 3
+ [*] Got fitness for individual 2
+ [*] Got fitness for individual 6
+ [*] Got fitness for individual 9
+ [*] Got fitness for individual 10
+ [*] Got fitness for individual 8
+Fittest individual is:
+{'S_1': '000', 'S_2': '0101110111'}
+Fitness value is: 0.9167
+
+Evaluating generation #27...
+ [*] Got fitness for individual 3
+ [*] Got fitness for individual 4
+ [*] Got fitness for individual 2
+ [*] Got fitness for individual 5
+ [*] Got fitness for individual 0
+ [*] Got fitness for individual 8
+ [*] Got fitness for individual 9
+ [*] Got fitness for individual 10
+Fittest individual is:
+{'S_1': '000', 'S_2': '0101100001'}
+Fitness value is: 0.9172
+
+Evaluating generation #28...
+ [*] Got fitness for individual 7
+ [*] Got fitness for individual 9
+ [*] Got fitness for individual 6
+ [*] Got fitness for individual 4
+ [*] Got fitness for individual 5
+Fittest individual is:
+{'S_1': '000', 'S_2': '0101110111'}
+Fitness value is: 0.9167
+
+Evaluating generation #29...
+ [*] Got fitness for individual 4
+ [*] Got fitness for individual 5
+ [*] Got fitness for individual 0
+ [*] Got fitness for individual 3
+ [*] Got fitness for individual 1
+ [*] Got fitness for individual 6
+ [*] Got fitness for individual 7
+ [*] Got fitness for individual 9
+ [*] Got fitness for individual 8
+ [*] Got fitness for individual 10
+Fittest individual is:
+{'S_1': '000', 'S_2': '0101110111'}
+Fitness value is: 0.9167
+
+Evaluating generation #30...
+ [*] Got fitness for individual 5
+ [*] Got fitness for individual 4
+ [*] Got fitness for individual 3
+ [*] Got fitness for individual 6
+ [*] Got fitness for individual 0
+ [*] Got fitness for individual 8
+ [*] Got fitness for individual 7
+ [*] Got fitness for individual 9
+ [*] Got fitness for individual 10
+Fittest individual is:
+{'S_1': '000', 'S_2': '1100001110'}
+Fitness value is: 0.9158
+
+Evaluating generation #31...
+ [*] Got fitness for individual 0
+ [*] Got fitness for individual 2
+ [*] Got fitness for individual 8
+ [*] Got fitness for individual 6
+ [*] Got fitness for individual 9
+ [*] Got fitness for individual 10
+Fittest individual is:
+{'S_1': '000', 'S_2': '1100001110'}
+Fitness value is: 0.9158
+
+Evaluating generation #32...
+aa [*] Got fitness for individual 6
+ [*] Got fitness for individual 1
+ [*] Got fitness for individual 3
+ [*] Got fitness for individual 5
+ [*] Got fitness for individual 7
+ [*] Got fitness for individual 9
+ [*] Got fitness for individual 10
+Fittest individual is:
+{'S_1': '000', 'S_2': '1100001110'}
+Fitness value is: 0.9158
+
+Evaluating generation #33...
+ [*] Got fitness for individual 3
+ [*] Got fitness for individual 1
+ [*] Got fitness for individual 2
+ [*] Got fitness for individual 5
+ [*] Got fitness for individual 8
+ [*] Got fitness for individual 0
+ [*] Got fitness for individual 9
+ [*] Got fitness for individual 6
+ [*] Got fitness for individual 7
+Fittest individual is:
+{'S_1': '000', 'S_2': '1000011010'}
+Fitness value is: 0.9172
+
+Evaluating generation #34...
+ [*] Got fitness for individual 0
+ [*] Got fitness for individual 4
+ [*] Got fitness for individual 3
+ [*] Got fitness for individual 2
+ [*] Got fitness for individual 1
+ [*] Got fitness for individual 5
+ [*] Got fitness for individual 9
+ [*] Got fitness for individual 7
+Fittest individual is:
+{'S_1': '000', 'S_2': '1000011010'}
+Fitness value is: 0.9172
+
+Evaluating generation #35...
+ [*] Got fitness for individual 2
+ [*] Got fitness for individual 0
+ [*] Got fitness for individual 3
+ [*] Got fitness for individual 4
+ [*] Got fitness for individual 1
+ [*] Got fitness for individual 5
+ [*] Got fitness for individual 6
+ [*] Got fitness for individual 7
+ [*] Got fitness for individual 8
+ [*] Got fitness for individual 9
+ [*] Got fitness for individual 10
+Fittest individual is:
+{'S_1': '000', 'S_2': '1100010010'}
+Fitness value is: 0.9176
+
+Evaluating generation #36...
+ [*] Got fitness for individual 1
+ [*] Got fitness for individual 3
+ [*] Got fitness for individual 2
+ [*] Got fitness for individual 4
+ [*] Got fitness for individual 5
+ [*] Got fitness for individual 6
+ [*] Got fitness for individual 8
+ [*] Got fitness for individual 9
+ [*] Got fitness for individual 7
+Fittest individual is:
+{'S_1': '000', 'S_2': '1000011010'}
+Fitness value is: 0.9172
+
+Evaluating generation #37...
+ [*] Got fitness for individual 0
+ [*] Got fitness for individual 1
+ [*] Got fitness for individual 4
+ [*] Got fitness for individual 3
+ [*] Got fitness for individual 5
+ [*] Got fitness for individual 6
+ [*] Got fitness for individual 9
+Fittest individual is:
+{'S_1': '000', 'S_2': '1000011010'}
+Fitness value is: 0.9172
+
+Evaluating generation #38...
+ [*] Got fitness for individual 1
+ [*] Got fitness for individual 2
+ [*] Got fitness for individual 3
+ [*] Got fitness for individual 0
+ [*] Got fitness for individual 4
+ [*] Got fitness for individual 5
+ [*] Got fitness for individual 7
+ [*] Got fitness for individual 6
+ [*] Got fitness for individual 9
+ [*] Got fitness for individual 8
+ [*] Got fitness for individual 10
+Fittest individual is:
+{'S_1': '000', 'S_2': '0100000110'}
+Fitness value is: 0.9169
+
+Evaluating generation #39...
+ [*] Got fitness for individual 4
+ [*] Got fitness for individual 5
+ [*] Got fitness for individual 6
+ [*] Got fitness for individual 1
+ [*] Got fitness for individual 7
+ [*] Got fitness for individual 8
+ [*] Got fitness for individual 9
+Fittest individual is:
+{'S_1': '000', 'S_2': '0100000110'}
+Fitness value is: 0.9169
+
+Evaluating generation #40...
+ [*] Got fitness for individual 1
+ [*] Got fitness for individual 2
+ [*] Got fitness for individual 0
+ [*] Got fitness for individual 4
+ [*] Got fitness for individual 3
+ [*] Got fitness for individual 8
+ [*] Got fitness for individual 9
+ [*] Got fitness for individual 5
+ [*] Got fitness for individual 10
+Fittest individual is:
+{'S_1': '000', 'S_2': '0100000110'}
+Fitness value is: 0.9169
+
+Evaluating generation #41...
+ [*] Got fitness for individual 1
+ [*] Got fitness for individual 2
+ [*] Got fitness for individual 3
+ [*] Got fitness for individual 4
+ [*] Got fitness for individual 7
+ [*] Got fitness for individual 9
+ [*] Got fitness for individual 8
+ [*] Got fitness for individual 10
+Fittest individual is:
+{'S_1': '000', 'S_2': '0101101110'}
+Fitness value is: 0.9169
+
+Evaluating generation #42...
+ [*] Got fitness for individual 2
+ [*] Got fitness for individual 0
+ [*] Got fitness for individual 3
+ [*] Got fitness for individual 4
+ [*] Got fitness for individual 5
+ [*] Got fitness for individual 8
+ [*] Got fitness for individual 6
+ [*] Got fitness for individual 9
+ [*] Got fitness for individual 10
+Fittest individual is:
+{'S_1': '000', 'S_2': '0100011010'}
+Fitness value is: 0.9168
+
+Evaluating generation #43...
+ [*] Got fitness for individual 0
+ [*] Got fitness for individual 2
+ [*] Got fitness for individual 1
+ [*] Got fitness for individual 3
+ [*] Got fitness for individual 4
+ [*] Got fitness for individual 6
+ [*] Got fitness for individual 5
+ [*] Got fitness for individual 9
+ [*] Got fitness for individual 8
+ [*] Got fitness for individual 10
+Fittest individual is:
+{'S_1': '000', 'S_2': '0110011010'}
+Fitness value is: 0.919
+
+Evaluating generation #44...
+ [*] Got fitness for individual 2
+ [*] Got fitness for individual 4
+ [*] Got fitness for individual 1
+ [*] Got fitness for individual 5
+ [*] Got fitness for individual 8
+ [*] Got fitness for individual 6
+ [*] Got fitness for individual 7
+ [*] Got fitness for individual 9
+Fittest individual is:
+{'S_1': '000', 'S_2': '0110011010'}
+Fitness value is: 0.919
+
+Evaluating generation #45...
+ [*] Got fitness for individual 3
+ [*] Got fitness for individual 4
+ [*] Got fitness for individual 5
+ [*] Got fitness for individual 8
+ [*] Got fitness for individual 9
+Fittest individual is:
+{'S_1': '000', 'S_2': '0110011010'}
+Fitness value is: 0.919
+
+Evaluating generation #46...
+ [*] Got fitness for individual 2
+ [*] Got fitness for individual 0
+ [*] Got fitness for individual 1
+ [*] Got fitness for individual 4
+ [*] Got fitness for individual 7
+ [*] Got fitness for individual 5
+ [*] Got fitness for individual 8
+ [*] Got fitness for individual 9
+ [*] Got fitness for individual 6
+ [*] Got fitness for individual 10
+Fittest individual is:
+{'S_1': '000', 'S_2': '1110001110'}
+Fitness value is: 0.9163
+
+Evaluating generation #47...
+ [*] Got fitness for individual 2
+ [*] Got fitness for individual 5
+ [*] Got fitness for individual 6
+ [*] Got fitness for individual 3
+ [*] Got fitness for individual 7
+ [*] Got fitness for individual 4
+ [*] Got fitness for individual 8
+Fittest individual is:
+{'S_1': '000', 'S_2': '1110001110'}
+Fitness value is: 0.9163
+
+Evaluating generation #48...
+ [*] Got fitness for individual 1
+ [*] Got fitness for individual 0
+ [*] Got fitness for individual 3
+ [*] Got fitness for individual 2
+ [*] Got fitness for individual 4
+ [*] Got fitness for individual 5
+ [*] Got fitness for individual 7
+ [*] Got fitness for individual 8
+Fittest individual is:
+{'S_1': '000', 'S_2': '1001000011'}
+Fitness value is: 0.9169
+
+Evaluating generation #49...
+ [*] Got fitness for individual 5
+ [*] Got fitness for individual 8
+ [*] Got fitness for individual 0
+ [*] Got fitness for individual 1
+ [*] Got fitness for individual 2
+Fittest individual is:
+{'S_1': '000', 'S_2': '1001000011'}
+Fitness value is: 0.9169
+
+Evaluating generation #50...
+ [*] Got fitness for individual 3
+ [*] Got fitness for individual 4
+ [*] Got fitness for individual 0
+ [*] Got fitness for individual 1
+ [*] Got fitness for individual 2
+ [*] Got fitness for individual 6
+ [*] Got fitness for individual 7
+ [*] Got fitness for individual 8
+ [*] Got fitness for individual 9
+ [*] Got fitness for individual 10
+Fittest individual is:
+{'S_1': '000', 'S_2': '1110001110'}
+Fitness value is: 0.9163
+
+
+Process finished with exit code 0
+

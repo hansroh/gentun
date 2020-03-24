@@ -55,6 +55,7 @@ class GeneticAlgorithm(object):
                 self.population[i] for i in random.sample(range(self.population.get_size()), self.tournament_size)
             ], maximize=self.population.get_fitness_criteria()
         )
+
         return tournament.get_fittest()
 
 
@@ -99,3 +100,47 @@ class RussianRouletteGA(GeneticAlgorithm):
                 if random.random() < self.mutation_probability:
                     new_population[i + 1].mutate()
         self.population = new_population
+
+
+class CrowSearchAlgorithm(object):
+    """Evolve a population iteratively to find better
+    individuals on each generation. If elitism is set, the
+    fittest individual of a generation will be part of the
+    next one.
+    """
+
+    def __init__(self, flock, tournament_size=5):
+        self.flock = flock
+        self.x_train, self.y_train = self.flock.get_data()
+        self.tournament_size = tournament_size
+        self.iteration = 1
+
+    def get_flock_type(self):
+        return self.flock.__class__
+
+    def run(self, max_iterations):
+        print("Starting Crow Search Algorithm...\n")
+        while self.iteration <= max_iterations:
+            self.release_flock()
+            self.iteration += 1
+
+    def release_flock(self):
+        if self.flock.get_size() < self.tournament_size:
+            raise ValueError("Flock size is smaller than tournament size.")
+        print("Running iteration #{}...".format(self.iteration))
+        fittest = self.flock.get_fittest()
+        print("Crow with best location is:")
+        print(fittest)
+        print("Fitness value is: {}\n".format(round(fittest.get_fitness(), 4)))
+
+        for crow in self.flock:
+            crow.follow(self.tournament_select())
+
+
+    def tournament_select(self):
+        tournament = self.get_flock_type()(
+            self.flock.get_species(), self.x_train, self.y_train, individual_list=[
+                self.flock[i] for i in random.sample(range(self.flock.get_size()), self.tournament_size)
+            ], maximize=self.flock.get_fitness_criteria()
+        )
+        return tournament.get_fittest()

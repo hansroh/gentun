@@ -12,9 +12,10 @@ import time
 
 class GentunClient(object):
 
-    def __init__(self, individual, x_train, y_train, host='localhost', port=5672,
+    def __init__(self, individual, algorithm,x_train, y_train, host='localhost', port=5672,
                  user='guest', password='guest', rabbit_queue='rpc_queue'):
         self.individual = individual
+        self.algorithm=algorithm
         self.x_train = x_train
         self.y_train = y_train
         self.credentials = pika.PlainCredentials(user, password)
@@ -45,7 +46,10 @@ class GentunClient(object):
         # print("     ... Genes: {}".format(str(genes)))
         # print("     ... Other: {}".format(str(additional_parameters)))
         # Run model and return fitness metric
-        individual = self.individual(self.x_train, self.y_train, genes=genes, **additional_parameters)
+        if self.algorithm=="ga":
+            individual = self.individual(self.x_train, self.y_train, genes=genes, **additional_parameters)
+        elif self.algorithm=="csa":
+            individual = self.individual(self.x_train, self.y_train, space=genes, **additional_parameters)
         fitness = individual.get_fitness()
         # Prepare response for master and send it
         response = json.dumps([i, fitness])
