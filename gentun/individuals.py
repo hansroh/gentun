@@ -381,6 +381,8 @@ class CrowIndividual(object):
             self.memory=self.location
             self.best_fitness=self.fitness
 
+        return self.fitness
+
     def get_additional_parameters(self):
         return {
             'nodes': self.nodes,
@@ -401,7 +403,7 @@ class CrowIndividual(object):
         """Compute individual's fitness if necessary and return it."""
         # if self.fitness is None:
         #Hello
-        self.evaluate_fitness()
+        # self.evaluate_fitness()
         return self.fitness
 
     def follow(self,crow):
