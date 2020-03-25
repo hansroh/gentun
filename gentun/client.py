@@ -48,9 +48,11 @@ class GentunClient(object):
         # Run model and return fitness metric
         if self.algorithm=="ga":
             individual = self.individual(self.x_train, self.y_train, genes=genes, **additional_parameters)
+            fitness = individual.get_fitness()
         elif self.algorithm=="csa":
             individual = self.individual(self.x_train, self.y_train, space=genes, **additional_parameters)
-        fitness = individual.get_fitness()
+            fitness = individual.evaluate_fitness()
+
         # Prepare response for master and send it
         response = json.dumps([i, fitness])
         channel.basic_publish(
