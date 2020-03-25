@@ -4,7 +4,7 @@ Genetic algorithm class
 """
 
 import random
-
+import operator
 
 class GeneticAlgorithm(object):
     """Evolve a population iteratively to find better
@@ -138,9 +138,6 @@ class CrowSearchAlgorithm(object):
 
 
     def tournament_select(self):
-        tournament = self.get_flock_type()(
-            self.flock.get_species(), self.x_train, self.y_train, individual_list=[
-                self.flock[i] for i in random.sample(range(self.flock.get_size()), self.tournament_size)
-            ], maximize=self.flock.get_fitness_criteria()
-        )
-        return tournament.get_fittest()
+        individual_list=[self.flock[i] for i in random.sample(range(self.flock.get_size()), self.tournament_size)]
+        target=max(individual_list, key=operator.methodcaller('get_fitness'))
+        return target

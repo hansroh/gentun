@@ -48,7 +48,7 @@ if __name__ == '__main__':
                 'kfold': 3, 'epochs': (20, 4, 1), 'learning_rate': (1e-3, 1e-4, 1e-5), 'batch_size': 32
             }, maximize=True, host='localhost', user='test', password='test'
         )
-        csa = CrowSearchAlgorithm(flock)
+        csa = CrowSearchAlgorithm(flock,2)
         csa.run(20)
     else:
         raise Exception("Only GA and CSA are supported")

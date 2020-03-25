@@ -165,7 +165,7 @@ class DistributedFlock(Flock):
         jobs = queue.Queue()  # "Counter" of pending jobs, shared between threads
         responses = queue.Queue()  # Collect fitness values from workers
         for i, individual in enumerate(self.individuals):
-            if not individual.get_fitness_status():
+            # if not individual.get_fitness_status():
                 job_order = json.dumps([i, individual.get_space(), individual.get_additional_parameters()])
                 jobs.put(True)
                 client = RpcClient(jobs, responses, **self.credentials)
