@@ -166,7 +166,10 @@ class DistributedFlock(Flock):
         responses = queue.Queue()  # Collect fitness values from workers
         for i, individual in enumerate(self.individuals):
             # if not individual.get_fitness_status():
+
                 job_order = json.dumps([i, individual.get_space(), individual.get_location(),individual.get_fitness(),individual.get_additional_parameters()])
+                # Todo: change training criteria from fitness status to explored locations.
+
                 jobs.put(True)
                 client = RpcClient(jobs, responses, **self.credentials)
                 communication_thread = threading.Thread(target=client.call, args=[job_order])
