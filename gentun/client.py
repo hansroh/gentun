@@ -36,7 +36,7 @@ class GentunClient(object):
             self.connection.process_data_events()
 
     def on_request(self, channel, method, properties, body):
-        i, genes, additional_parameters = json.loads(body)
+        i, genes, location,fitness,additional_parameters = json.loads(body)
         print(additional_parameters)
         # If an additional parameter is received as a list, convert to tuple
         for param in additional_parameters.keys():

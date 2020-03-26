@@ -69,7 +69,7 @@ class RpcClient(object):
         )
         while self.response is None:
             time.sleep(3)
-        print(" [*] Got fitness for individual {}".format(json.loads(parameters)[0]))
+        print(" [*] Got fitness for individual {}".format(json.loads(parameters)[0]),json.loads(parameters))
         self.responses.put(self.response)
         # Job is completed, remove job order from queue
         self.jobs.get()
@@ -166,7 +166,7 @@ class DistributedFlock(Flock):
         responses = queue.Queue()  # Collect fitness values from workers
         for i, individual in enumerate(self.individuals):
             # if not individual.get_fitness_status():
-                job_order = json.dumps([i, individual.get_space(), individual.get_additional_parameters()])
+                job_order = json.dumps([i, individual.get_space(), individual.get_location(),individual.get_fitness(),individual.get_additional_parameters()])
                 jobs.put(True)
                 client = RpcClient(jobs, responses, **self.credentials)
                 communication_thread = threading.Thread(target=client.call, args=[job_order])

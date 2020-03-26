@@ -1,0 +1,202 @@
+Initializing a random population. Size: 5
+Starting Crow Search Algorithm...
+
+Running iteration #1...
+ [*] Got fitness for individual 0
+ [*] Got fitness for individual 1
+ [*] Got fitness for individual 2
+ [*] Got fitness for individual 4
+ [*] Got fitness for individual 3
+Crow with best location is:
+{'S_1': '010', 'S_2': '1111000110'}
+Fitness value is: 0.9975
+
+Running iteration #2...
+ [*] Got fitness for individual 0
+ [*] Got fitness for individual 1
+ [*] Got fitness for individual 2
+ [*] Got fitness for individual 4
+ [*] Got fitness for individual 3
+Crow with best location is:
+{'S_1': '011', 'S_2': '0010101101'}
+Fitness value is: 0.9974
+
+Running iteration #3...
+ [*] Got fitness for individual 0
+ [*] Got fitness for individual 1
+ [*] Got fitness for individual 2
+ [*] Got fitness for individual 4
+ [*] Got fitness for individual 3
+Crow with best location is:
+{'S_1': '111', 'S_2': '1110000111'}
+Fitness value is: 0.9975
+
+Running iteration #4...
+ [*] Got fitness for individual 0
+ [*] Got fitness for individual 1
+ [*] Got fitness for individual 2
+ [*] Got fitness for individual 4
+ [*] Got fitness for individual 3
+Crow with best location is:
+{'S_1': '010', 'S_2': '0000111110'}
+Fitness value is: 0.9978
+
+Running iteration #5...
+ [*] Got fitness for individual 0
+ [*] Got fitness for individual 1
+ [*] Got fitness for individual 2
+ [*] Got fitness for individual 4
+ [*] Got fitness for individual 3
+Crow with best location is:
+{'S_1': '000', 'S_2': '0100010110'}
+Fitness value is: 0.9976
+
+Running iteration #6...
+ [*] Got fitness for individual 0
+ [*] Got fitness for individual 1
+ [*] Got fitness for individual 2
+ [*] Got fitness for individual 4
+ [*] Got fitness for individual 3
+Crow with best location is:
+{'S_1': '001', 'S_2': '1111011100'}
+Fitness value is: 0.9975
+
+Running iteration #7...
+ [*] Got fitness for individual 0
+ [*] Got fitness for individual 1
+ [*] Got fitness for individual 2
+ [*] Got fitness for individual 4
+ [*] Got fitness for individual 3
+Crow with best location is:
+{'S_1': '000', 'S_2': '0010111101'}
+Fitness value is: 0.9976
+
+Running iteration #8...
+ [*] Got fitness for individual 0
+ [*] Got fitness for individual 1
+ [*] Got fitness for individual 2
+ [*] Got fitness for individual 3
+ [*] Got fitness for individual 4
+Crow with best location is:
+{'S_1': '000', 'S_2': '1110001110'}
+Fitness value is: 0.9975
+
+Running iteration #9...
+ [*] Got fitness for individual 0
+ [*] Got fitness for individual 1
+ [*] Got fitness for individual 2
+ [*] Got fitness for individual 4
+ [*] Got fitness for individual 3
+Crow with best location is:
+{'S_1': '000', 'S_2': '1001111110'}
+Fitness value is: 0.9979
+
+Running iteration #10...
+ [*] Got fitness for individual 0
+ [*] Got fitness for individual 1
+ [*] Got fitness for individual 2
+ [*] Got fitness for individual 3
+ [*] Got fitness for individual 4
+Crow with best location is:
+{'S_1': '000', 'S_2': '0101111101'}
+Fitness value is: 0.9977
+
+Running iteration #11...
+ [*] Got fitness for individual 0
+ [*] Got fitness for individual 1
+ [*] Got fitness for individual 2
+ [*] Got fitness for individual 3
+ [*] Got fitness for individual 4
+Crow with best location is:
+{'S_1': '110', 'S_2': '1000011110'}
+Fitness value is: 0.9976
+
+Running iteration #12...
+ [*] Got fitness for individual 4
+ [*] Got fitness for individual 3
+ [*] Got fitness for individual 0
+ [*] Got fitness for individual 1
+ [*] Got fitness for individual 2
+Crow with best location is:
+{'S_1': '100', 'S_2': '1111001100'}
+Fitness value is: 0.9974
+
+Running iteration #13...
+ [*] Got fitness for individual 0
+ [*] Got fitness for individual 1
+ [*] Got fitness for individual 2
+ [*] Got fitness for individual 3
+ [*] Got fitness for individual 4
+Crow with best location is:
+{'S_1': '011', 'S_2': '1010001100'}
+Fitness value is: 0.9976
+
+Running iteration #14...
+ [*] Got fitness for individual 0
+ [*] Got fitness for individual 1
+ [*] Got fitness for individual 2
+ [*] Got fitness for individual 3
+ [*] Got fitness for individual 4
+Crow with best location is:
+{'S_1': '011', 'S_2': '0010001101'}
+Fitness value is: 0.9976
+
+Running iteration #15...
+ [*] Got fitness for individual 0
+ [*] Got fitness for individual 1
+ [*] Got fitness for individual 4
+ [*] Got fitness for individual 3
+ [*] Got fitness for individual 2
+Crow with best location is:
+{'S_1': '110', 'S_2': '1110000011'}
+Fitness value is: 0.9975
+
+Running iteration #16...
+ [*] Got fitness for individual 0
+ [*] Got fitness for individual 1
+ [*] Got fitness for individual 2
+ [*] Got fitness for individual 3
+ [*] Got fitness for individual 4
+Crow with best location is:
+{'S_1': '100', 'S_2': '1000111100'}
+Fitness value is: 0.9976
+
+Running iteration #17...
+ [*] Got fitness for individual 2
+ [*] Got fitness for individual 0
+ [*] Got fitness for individual 1
+ [*] Got fitness for individual 3
+ [*] Got fitness for individual 4
+Crow with best location is:
+{'S_1': '110', 'S_2': '0100100010'}
+Fitness value is: 0.9977
+
+Running iteration #18...
+ [*] Got fitness for individual 2
+ [*] Got fitness for individual 0
+ [*] Got fitness for individual 1
+ [*] Got fitness for individual 3
+ [*] Got fitness for individual 4
+Crow with best location is:
+{'S_1': '101', 'S_2': '0001011011'}
+Fitness value is: 0.9976
+
+Running iteration #19...
+ [*] Got fitness for individual 2
+ [*] Got fitness for individual 1
+ [*] Got fitness for individual 0
+ [*] Got fitness for individual 3
+ [*] Got fitness for individual 4
+Crow with best location is:
+{'S_1': '111', 'S_2': '0101001110'}
+Fitness value is: 0.9977
+
+Running iteration #20...
+ [*] Got fitness for individual 2
+ [*] Got fitness for individual 0
+ [*] Got fitness for individual 1
+ [*] Got fitness for individual 3
+ [*] Got fitness for individual 4
+Crow with best location is:
+{'S_1': '110', 'S_2': '0001010100'}
+Fitness value is: 0.9977
