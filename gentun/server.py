@@ -69,7 +69,11 @@ class RpcClient(object):
         )
         while self.response is None:
             time.sleep(3)
-        print(" [*] Got fitness for individual {}".format(json.loads(parameters)[0]),json.loads(parameters))
+        individual_attr=json.loads(parameters)
+        acc=float(self.response.decode().split(",")[1].split(']')[0])
+        if individual_attr[3]==None:
+            individual_attr[3]=0.0000
+        print(" [*] Fitness for individual {}".format(individual_attr[0])," is {:.4f}".format(acc),"on location",individual_attr[2],". Individual's bes known performance is","{:.4f}".format(individual_attr[3]),"on location",individual_attr[4])
         self.responses.put(self.response)
         # Job is completed, remove job order from queue
         self.jobs.get()
@@ -161,26 +165,33 @@ class DistributedFlock(Flock):
         workers evaluate individuals with unknown fitness.
         """
         # Purge job queue if necessary
+        explored=[]
+        explored_fitness=[]
         RpcClient(None, None, **self.credentials).purge()
         jobs = queue.Queue()  # "Counter" of pending jobs, shared between threads
         responses = queue.Queue()  # Collect fitness values from workers
         for i, individual in enumerate(self.individuals):
+            # Todo: change training criteria from fitness status to explored locations.
             # if not individual.get_fitness_status():
-
-                job_order = json.dumps([i, individual.get_space(), individual.get_location(),individual.get_fitness(),individual.get_additional_parameters()])
-                # Todo: change training criteria from fitness status to explored locations.
-
+            if individual.get_location() not in explored:
+                job_order = json.dumps([i, individual.get_space(), individual.get_location(),individual.get_best_fitness(),individual.get_memory(),individual.get_additional_parameters()])
                 jobs.put(True)
                 client = RpcClient(jobs, responses, **self.credentials)
                 communication_thread = threading.Thread(target=client.call, args=[job_order])
                 communication_thread.daemon = True
                 communication_thread.start()
+            else:
+                print("Performance on location",individual.get_location(), "has already been measured to be",explored_fitness[explored.index(individual.get_location())])
+                individual.set_fitness(explored_fitness[explored.index(individual.get_location())])
         jobs.join()  # Block here until all jobs are completed
         # Collect results and assign them to their respective individuals
         while not responses.empty():
             response = responses.get(False)
             i, value = json.loads(response)
             self.individuals[i].set_fitness(value)
+            if self.individuals[i].get_location() not in explored:
+                explored.append(self.individuals[i].get_location())
+                explored_fitness.append(value)
 
 
 class DistributedGridPopulation(DistributedPopulation, GridPopulation):
