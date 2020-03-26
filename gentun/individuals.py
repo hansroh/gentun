@@ -406,6 +406,13 @@ class CrowIndividual(object):
         # self.evaluate_fitness()
         return self.fitness
 
+    def get_best_fitness(self):
+        """Compute individual's fitness if necessary and return it."""
+        # if self.fitness is None:
+        #Hello
+        # self.evaluate_fitness()
+        return self.best_fitness
+
     def follow(self,crow):
         assert self.__class__ == crow.__class__  # Can only reproduce if they're the same species
 

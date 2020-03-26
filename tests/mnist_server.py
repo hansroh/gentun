@@ -43,12 +43,12 @@ if __name__ == '__main__':
 
     elif args.algorithm=="csa":
         flock = DistributedFlock(
-            CrowIndividual, input_shape=input_shape,nb_classes=nb_classes,size=3, flight_length=13, awareness_probability=0.15,
+            CrowIndividual, input_shape=input_shape,nb_classes=nb_classes,size=20, flight_length=13, awareness_probability=0.15,
             additional_parameters={
                 'kfold': 3, 'epochs': (20, 4, 1), 'learning_rate': (1e-3, 1e-4, 1e-5), 'batch_size': 32
             }, maximize=True, host='localhost', user='test', password='test'
         )
-        csa = CrowSearchAlgorithm(flock,2)
-        csa.run(1)
+        csa = CrowSearchAlgorithm(flock,5)
+        csa.run(20)
     else:
         raise Exception("Only GA and CSA are supported")
