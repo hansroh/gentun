@@ -70,10 +70,11 @@ class RpcClient(object):
         while self.response is None:
             time.sleep(3)
         individual_attr=json.loads(parameters)
-        acc=float(self.response.decode().split(",")[1].split(']')[0])
+        acc=float(self.response.decode().split(",")[1])
+        best_acc=float(self.response.decode().split(",")[2].split(']')[0])
         if individual_attr[3]==None:
             individual_attr[3]=0.0000
-        print(" [*] Fitness for individual {}".format(individual_attr[0])," is {:.4f}".format(acc),"on location",individual_attr[2],". Individual's bes known performance is","{:.4f}".format(individual_attr[3]),"on location",individual_attr[4])
+        print(" [*] Fitness for individual {}".format(individual_attr[0])," is {:.4f}".format(acc),"on location",individual_attr[2],". Individual's bes known performance is","{:.4f}".format(best_acc),"on location",individual_attr[4])
         self.responses.put(self.response)
         # Job is completed, remove job order from queue
         self.jobs.get()

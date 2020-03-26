@@ -1,0 +1,227 @@
+Initializing a random population. Size: 20
+Starting Crow Search Algorithm...
+
+Running iteration #1...
+ [*] Fitness for individual 1  is 0.9972 on location {'S_1': '010', 'S_2': '0101010111'} . Individual's bes known performance is 0.0000 on location {'S_1': '010', 'S_2': '0101010111'}
+ [*] Fitness for individual 3  is 0.9974 on location {'S_1': '010', 'S_2': '1111100100'} . Individual's bes known performance is 0.0000 on location {'S_1': '010', 'S_2': '1111100100'}
+ [*] Fitness for individual 0  is 0.9974 on location {'S_1': '010', 'S_2': '0001100011'} . Individual's bes known performance is 0.0000 on location {'S_1': '010', 'S_2': '0001100011'}
+ [*] Fitness for individual 4  is 0.9968 on location {'S_1': '110', 'S_2': '0001111110'} . Individual's bes known performance is 0.0000 on location {'S_1': '110', 'S_2': '0001111110'}
+ [*] Fitness for individual 2  is 0.9968 on location {'S_1': '010', 'S_2': '0110010010'} . Individual's bes known performance is 0.0000 on location {'S_1': '010', 'S_2': '0110010010'}
+ [*] Fitness for individual 6  is 0.9973 on location {'S_1': '100', 'S_2': '1110110010'} . Individual's bes known performance is 0.0000 on location {'S_1': '100', 'S_2': '1110110010'}
+ [*] Fitness for individual 5  is 0.9967 on location {'S_1': '101', 'S_2': '0111110011'} . Individual's bes known performance is 0.0000 on location {'S_1': '101', 'S_2': '0111110011'}
+ [*] Fitness for individual 7  is 0.9975 on location {'S_1': '011', 'S_2': '0100110101'} . Individual's bes known performance is 0.0000 on location {'S_1': '011', 'S_2': '0100110101'}
+ [*] Fitness for individual 8  is 0.9970 on location {'S_1': '010', 'S_2': '1111100100'} . Individual's bes known performance is 0.0000 on location {'S_1': '010', 'S_2': '1111100100'}
+ [*] Fitness for individual 9  is 0.9977 on location {'S_1': '001', 'S_2': '0011000000'} . Individual's bes known performance is 0.0000 on location {'S_1': '001', 'S_2': '0011000000'}
+ [*] Fitness for individual 11  is 0.9971 on location {'S_1': '001', 'S_2': '0100010010'} . Individual's bes known performance is 0.0000 on location {'S_1': '001', 'S_2': '0100010010'}
+ [*] Fitness for individual 10  is 0.9968 on location {'S_1': '110', 'S_2': '1110010011'} . Individual's bes known performance is 0.0000 on location {'S_1': '110', 'S_2': '1110010011'}
+ [*] Fitness for individual 13  is 0.9974 on location {'S_1': '100', 'S_2': '0001100000'} . Individual's bes known performance is 0.0000 on location {'S_1': '100', 'S_2': '0001100000'}
+ [*] Fitness for individual 12  is 0.9973 on location {'S_1': '101', 'S_2': '1000101011'} . Individual's bes known performance is 0.0000 on location {'S_1': '101', 'S_2': '1000101011'}
+ [*] Fitness for individual 14  is 0.9972 on location {'S_1': '101', 'S_2': '0001111111'} . Individual's bes known performance is 0.0000 on location {'S_1': '101', 'S_2': '0001111111'}
+ [*] Fitness for individual 15  is 0.9971 on location {'S_1': '110', 'S_2': '0111000011'} . Individual's bes known performance is 0.0000 on location {'S_1': '110', 'S_2': '0111000011'}
+ [*] Fitness for individual 17  is 0.9974 on location {'S_1': '101', 'S_2': '1011111100'} . Individual's bes known performance is 0.0000 on location {'S_1': '101', 'S_2': '1011111100'}
+ [*] Fitness for individual 16  is 0.9974 on location {'S_1': '000', 'S_2': '1001111000'} . Individual's bes known performance is 0.0000 on location {'S_1': '000', 'S_2': '1001111000'}
+ [*] Fitness for individual 18  is 0.9973 on location {'S_1': '101', 'S_2': '0111110101'} . Individual's bes known performance is 0.0000 on location {'S_1': '101', 'S_2': '0111110101'}
+ [*] Fitness for individual 19  is 0.9972 on location {'S_1': '101', 'S_2': '1011011000'} . Individual's bes known performance is 0.0000 on location {'S_1': '101', 'S_2': '1011011000'}
+Crow with best location is:
+{'S_1': '001', 'S_2': '0011000000'}
+Fitness value is: 0.9977
+
+Running iteration #2...
+ [*] Fitness for individual 5  is 0.9973 on location {'S_1': '101', 'S_2': '0111110011'} . Individual's bes known performance is 0.0000 on location {'S_1': '101', 'S_2': '0111110011'}
+ [*] Fitness for individual 1  is 0.9969 on location {'S_1': '001', 'S_2': '0110110011'} . Individual's bes known performance is 0.0000 on location {'S_1': '010', 'S_2': '0101010111'}
+ [*] Fitness for individual 3  is 0.9970 on location {'S_1': '101', 'S_2': '0110111000'} . Individual's bes known performance is 0.0000 on location {'S_1': '010', 'S_2': '1111100100'}
+ [*] Fitness for individual 2  is 0.9972 on location {'S_1': '100', 'S_2': '0011001010'} . Individual's bes known performance is 0.0000 on location {'S_1': '010', 'S_2': '0110010010'}
+ [*] Fitness for individual 0  is 0.9969 on location {'S_1': '010', 'S_2': '0001100011'} . Individual's bes known performance is 0.0000 on location {'S_1': '010', 'S_2': '0001100011'}
+ [*] Fitness for individual 4  is 0.9970 on location {'S_1': '011', 'S_2': '0010000001'} . Individual's bes known performance is 0.0000 on location {'S_1': '110', 'S_2': '0001111110'}
+ [*] Fitness for individual 6  is 0.9974 on location {'S_1': '000', 'S_2': '0111100100'} . Individual's bes known performance is 0.0000 on location {'S_1': '000', 'S_2': '0111100100'}
+ [*] Fitness for individual 7  is 0.9969 on location {'S_1': '011', 'S_2': '0000111111'} . Individual's bes known performance is 0.0000 on location {'S_1': '011', 'S_2': '0100110101'}
+ [*] Fitness for individual 8  is 0.9972 on location {'S_1': '011', 'S_2': '0011100100'} . Individual's bes known performance is 0.0000 on location {'S_1': '011', 'S_2': '0011100100'}
+ [*] Fitness for individual 9  is 0.9975 on location {'S_1': '100', 'S_2': '1001110100'} . Individual's bes known performance is 0.0000 on location {'S_1': '001', 'S_2': '0011000000'}
+ [*] Fitness for individual 12  is 0.9977 on location {'S_1': '001', 'S_2': '1111001001'} . Individual's bes known performance is 0.0000 on location {'S_1': '101', 'S_2': '1000101011'}
+ [*] Fitness for individual 10  is 0.9971 on location {'S_1': '010', 'S_2': '1101001011'} . Individual's bes known performance is 0.0000 on location {'S_1': '110', 'S_2': '1110010011'}
+ [*] Fitness for individual 13  is 0.9970 on location {'S_1': '001', 'S_2': '1011100100'} . Individual's bes known performance is 0.0000 on location {'S_1': '100', 'S_2': '0001100000'}
+ [*] Fitness for individual 11  is 0.9971 on location {'S_1': '001', 'S_2': '1001010001'} . Individual's bes known performance is 0.0000 on location {'S_1': '001', 'S_2': '0100010010'}
+ [*] Fitness for individual 14  is 0.9970 on location {'S_1': '101', 'S_2': '0101010011'} . Individual's bes known performance is 0.0000 on location {'S_1': '101', 'S_2': '0001111111'}
+ [*] Fitness for individual 15  is 0.9973 on location {'S_1': '010', 'S_2': '1011110001'} . Individual's bes known performance is 0.0000 on location {'S_1': '110', 'S_2': '0111000011'}
+ [*] Fitness for individual 16  is 0.9972 on location {'S_1': '011', 'S_2': '1111101010'} . Individual's bes known performance is 0.0000 on location {'S_1': '000', 'S_2': '1001111000'}
+ [*] Fitness for individual 18  is 0.9971 on location {'S_1': '100', 'S_2': '1111101001'} . Individual's bes known performance is 0.0000 on location {'S_1': '101', 'S_2': '0111110101'}
+ [*] Fitness for individual 17  is 0.9972 on location {'S_1': '000', 'S_2': '0001110000'} . Individual's bes known performance is 0.0000 on location {'S_1': '101', 'S_2': '1011111100'}
+ [*] Fitness for individual 19  is 0.9971 on location {'S_1': '001', 'S_2': '0011111001'} . Individual's bes known performance is 0.0000 on location {'S_1': '001', 'S_2': '0011111001'}
+Crow with best location is:
+{'S_1': '001', 'S_2': '1111001001'}
+Fitness value is: 0.9977
+
+Running iteration #3...
+ [*] Fitness for individual 3  is 0.9975 on location {'S_1': '001', 'S_2': '0100001000'} . Individual's bes known performance is 0.0000 on location {'S_1': '010', 'S_2': '1111100100'}
+ [*] Fitness for individual 1  is 0.9972 on location {'S_1': '011', 'S_2': '000110011'} . Individual's bes known performance is 0.0000 on location {'S_1': '010', 'S_2': '0101010111'}
+ [*] Fitness for individual 4  is 0.9974 on location {'S_1': '110', 'S_2': '1111011000'} . Individual's bes known performance is 0.0000 on location {'S_1': '110', 'S_2': '0001111110'}
+ [*] Fitness for individual 2  is 0.9975 on location {'S_1': '110', 'S_2': '0111100101'} . Individual's bes known performance is 0.0000 on location {'S_1': '010', 'S_2': '0110010010'}
+ [*] Fitness for individual 5  is 0.9971 on location {'S_1': '111', 'S_2': '1001110110'} . Individual's bes known performance is 0.0000 on location {'S_1': '101', 'S_2': '0111110011'}
+ [*] Fitness for individual 0  is 0.9965 on location {'S_1': '111', 'S_2': '0101100111'} . Individual's bes known performance is 0.0000 on location {'S_1': '010', 'S_2': '0001100011'}
+ [*] Fitness for individual 6  is 0.9976 on location {'S_1': '011', 'S_2': '1111110101'} . Individual's bes known performance is 0.0000 on location {'S_1': '000', 'S_2': '0111100100'}
+ [*] Fitness for individual 7  is 0.9975 on location {'S_1': '000', 'S_2': '1000011000'} . Individual's bes known performance is 0.0000 on location {'S_1': '011', 'S_2': '0100110101'}
+ [*] Fitness for individual 9  is 0.9972 on location {'S_1': '110', 'S_2': '1001111100'} . Individual's bes known performance is 0.0000 on location {'S_1': '001', 'S_2': '0011000000'}
+ [*] Fitness for individual 8  is 0.9970 on location {'S_1': '010', 'S_2': '1100100011'} . Individual's bes known performance is 0.0000 on location {'S_1': '011', 'S_2': '0011100100'}
+ [*] Fitness for individual 10  is 0.9970 on location {'S_1': '101', 'S_2': '1110110001'} . Individual's bes known performance is 0.0000 on location {'S_1': '110', 'S_2': '1110010011'}
+ [*] Fitness for individual 12  is 0.9974 on location {'S_1': '000', 'S_2': '1100110101'} . Individual's bes known performance is 0.0000 on location {'S_1': '101', 'S_2': '1000101011'}
+ [*] Fitness for individual 13  is 0.9972 on location {'S_1': '010', 'S_2': '0000111110'} . Individual's bes known performance is 0.0000 on location {'S_1': '100', 'S_2': '0001100000'}
+ [*] Fitness for individual 11  is 0.9971 on location {'S_1': '011', 'S_2': '001100001'} . Individual's bes known performance is 0.0000 on location {'S_1': '001', 'S_2': '0100010010'}
+ [*] Fitness for individual 14  is 0.9974 on location {'S_1': '000', 'S_2': '1001001101'} . Individual's bes known performance is 0.0000 on location {'S_1': '101', 'S_2': '0001111111'}
+ [*] Fitness for individual 15  is 0.9970 on location {'S_1': '101', 'S_2': '1011001011'} . Individual's bes known performance is 0.0000 on location {'S_1': '110', 'S_2': '0111000011'}
+ [*] Fitness for individual 16  is 0.9974 on location {'S_1': '110', 'S_2': '1101111110'} . Individual's bes known performance is 0.0000 on location {'S_1': '000', 'S_2': '1001111000'}
+ [*] Fitness for individual 18  is 0.9971 on location {'S_1': '110', 'S_2': '0100101010'} . Individual's bes known performance is 0.0000 on location {'S_1': '101', 'S_2': '0111110101'}
+ [*] Fitness for individual 17  is 0.9970 on location {'S_1': '011', 'S_2': '1101001100'} . Individual's bes known performance is 0.0000 on location {'S_1': '101', 'S_2': '1011111100'}
+ [*] Fitness for individual 19  is 0.9972 on location {'S_1': '011', 'S_2': '0110010110'} . Individual's bes known performance is 0.0000 on location {'S_1': '001', 'S_2': '0011111001'}
+Crow with best location is:
+{'S_1': '011', 'S_2': '1111110101'}
+Fitness value is: 0.9976
+
+Running iteration #4...
+ [*] Fitness for individual 1  is 0.9970 on location {'S_1': '111', 'S_2': '0100111100'} . Individual's bes known performance is 0.0000 on location {'S_1': '010', 'S_2': '0101010111'}
+ [*] Fitness for individual 3  is 0.9974 on location {'S_1': '001', 'S_2': '0101010000'} . Individual's bes known performance is 0.0000 on location {'S_1': '010', 'S_2': '1111100100'}
+ [*] Fitness for individual 2  is 0.9971 on location {'S_1': '110', 'S_2': '0111100110'} . Individual's bes known performance is 0.0000 on location {'S_1': '010', 'S_2': '0110010010'}
+ [*] Fitness for individual 4  is 0.9976 on location {'S_1': '010', 'S_2': '0010010010'} . Individual's bes known performance is 0.0000 on location {'S_1': '110', 'S_2': '0001111110'}
+ [*] Fitness for individual 5  is 0.9970 on location {'S_1': '001', 'S_2': '0111011111'} . Individual's bes known performance is 0.0000 on location {'S_1': '101', 'S_2': '0111110011'}
+ [*] Fitness for individual 0  is 0.9967 on location {'S_1': '001', 'S_2': '0000010110'} . Individual's bes known performance is 0.0000 on location {'S_1': '010', 'S_2': '0001100011'}
+ [*] Fitness for individual 6  is 0.9972 on location {'S_1': '010', 'S_2': '0101001100'} . Individual's bes known performance is 0.0000 on location {'S_1': '000', 'S_2': '0111100100'}
+ [*] Fitness for individual 7  is 0.9973 on location {'S_1': '100', 'S_2': '1101010001'} . Individual's bes known performance is 0.0000 on location {'S_1': '011', 'S_2': '0100110101'}
+ [*] Fitness for individual 8  is 0.9974 on location {'S_1': '011', 'S_2': '1000011111'} . Individual's bes known performance is 0.0000 on location {'S_1': '011', 'S_2': '0011100100'}
+ [*] Fitness for individual 9  is 0.9970 on location {'S_1': '011', 'S_2': '1010111010'} . Individual's bes known performance is 0.0000 on location {'S_1': '001', 'S_2': '0011000000'}
+ [*] Fitness for individual 12  is 0.9973 on location {'S_1': '110', 'S_2': '1011001110'} . Individual's bes known performance is 0.0000 on location {'S_1': '101', 'S_2': '1000101011'}
+ [*] Fitness for individual 10  is 0.9969 on location {'S_1': '100', 'S_2': '1001111001'} . Individual's bes known performance is 0.0000 on location {'S_1': '110', 'S_2': '1110010011'}
+ [*] Fitness for individual 13  is 0.9978 on location {'S_1': '111', 'S_2': '0010111000'} . Individual's bes known performance is 0.0000 on location {'S_1': '100', 'S_2': '0001100000'}
+ [*] Fitness for individual 14  is 0.9969 on location {'S_1': '111', 'S_2': '1000110000'} . Individual's bes known performance is 0.0000 on location {'S_1': '101', 'S_2': '0001111111'}
+ [*] Fitness for individual 15  is 0.9969 on location {'S_1': '000', 'S_2': '0100111100'} . Individual's bes known performance is 0.0000 on location {'S_1': '110', 'S_2': '0111000011'}
+ [*] Fitness for individual 11  is 0.9972 on location {'S_1': '100', 'S_2': '0111011011'} . Individual's bes known performance is 0.0000 on location {'S_1': '001', 'S_2': '0100010010'}
+ [*] Fitness for individual 16  is 0.9972 on location {'S_1': '100', 'S_2': '1000001011'} . Individual's bes known performance is 0.0000 on location {'S_1': '000', 'S_2': '1001111000'}
+ [*] Fitness for individual 18  is 0.9973 on location {'S_1': '111', 'S_2': '0111000100'} . Individual's bes known performance is 0.0000 on location {'S_1': '101', 'S_2': '0111110101'}
+ [*] Fitness for individual 19  is 0.9969 on location {'S_1': '001', 'S_2': '0011010101'} . Individual's bes known performance is 0.0000 on location {'S_1': '001', 'S_2': '0011111001'}
+ [*] Fitness for individual 17  is 0.9968 on location {'S_1': '010', 'S_2': '0011010101'} . Individual's bes known performance is 0.0000 on location {'S_1': '101', 'S_2': '1011111100'}
+Crow with best location is:
+{'S_1': '111', 'S_2': '0010111000'}
+Fitness value is: 0.9978
+
+Running iteration #5...
+ [*] Fitness for individual 6  is 0.9976 on location {'S_1': '010', 'S_2': '1110010110'} . Individual's bes known performance is 0.0000 on location {'S_1': '000', 'S_2': '0111100100'}
+ [*] Fitness for individual 4  is 0.9974 on location {'S_1': '010', 'S_2': '0010011010'} . Individual's bes known performance is 0.0000 on location {'S_1': '110', 'S_2': '0001111110'}
+ [*] Fitness for individual 3  is 0.9972 on location {'S_1': '010', 'S_2': '1110100010'} . Individual's bes known performance is 0.0000 on location {'S_1': '010', 'S_2': '1111100100'}
+ [*] Fitness for individual 0  is 0.9973 on location {'S_1': '010', 'S_2': '1111100100'} . Individual's bes known performance is 0.0000 on location {'S_1': '010', 'S_2': '0001100011'}
+ [*] Fitness for individual 2  is 0.9969 on location {'S_1': '000', 'S_2': '1000111110'} . Individual's bes known performance is 0.0000 on location {'S_1': '010', 'S_2': '0110010010'}
+ [*] Fitness for individual 7  is 0.9973 on location {'S_1': '101', 'S_2': '0101011001'} . Individual's bes known performance is 0.0000 on location {'S_1': '011', 'S_2': '0100110101'}
+ [*] Fitness for individual 1  is 0.9971 on location {'S_1': '111', 'S_2': '0010111110'} . Individual's bes known performance is 0.0000 on location {'S_1': '010', 'S_2': '0101010111'}
+ [*] Fitness for individual 5  is 0.9967 on location {'S_1': '011', 'S_2': '0110001101'} . Individual's bes known performance is 0.0000 on location {'S_1': '101', 'S_2': '0111110011'}
+ [*] Fitness for individual 12  is 0.9973 on location {'S_1': '000', 'S_2': '1000110101'} . Individual's bes known performance is 0.0000 on location {'S_1': '101', 'S_2': '1000101011'}
+ [*] Fitness for individual 9  is 0.9974 on location {'S_1': '110', 'S_2': '0001011101'} . Individual's bes known performance is 0.0000 on location {'S_1': '001', 'S_2': '0011000000'}
+ [*] Fitness for individual 8  is 0.9977 on location {'S_1': '011', 'S_2': '1010011010'} . Individual's bes known performance is 0.0000 on location {'S_1': '011', 'S_2': '0011100100'}
+ [*] Fitness for individual 10  is 0.9974 on location {'S_1': '110', 'S_2': '1001111010'} . Individual's bes known performance is 0.0000 on location {'S_1': '110', 'S_2': '1110010011'}
+ [*] Fitness for individual 15  is 0.9976 on location {'S_1': '010', 'S_2': '0111100'} . Individual's bes known performance is 0.0000 on location {'S_1': '110', 'S_2': '0111000011'}
+ [*] Fitness for individual 11  is 0.9975 on location {'S_1': '100', 'S_2': '1000110101'} . Individual's bes known performance is 0.0000 on location {'S_1': '001', 'S_2': '0100010010'}
+ [*] Fitness for individual 19  is 0.9976 on location {'S_1': '011', 'S_2': '0000111111'} . Individual's bes known performance is 0.0000 on location {'S_1': '001', 'S_2': '0011111001'}
+ [*] Fitness for individual 16  is 0.9974 on location {'S_1': '000', 'S_2': '1110100101'} . Individual's bes known performance is 0.0000 on location {'S_1': '000', 'S_2': '1001111000'}
+ [*] Fitness for individual 18  is 0.9970 on location {'S_1': '001', 'S_2': '0111000001'} . Individual's bes known performance is 0.0000 on location {'S_1': '101', 'S_2': '0111110101'}
+ [*] Fitness for individual 17  is 0.9974 on location {'S_1': '100', 'S_2': '1010110101'} . Individual's bes known performance is 0.0000 on location {'S_1': '101', 'S_2': '1011111100'}
+ [*] Fitness for individual 13  is 0.9971 on location {'S_1': '111', 'S_2': '0110110011'} . Individual's bes known performance is 0.0000 on location {'S_1': '100', 'S_2': '0001100000'}
+ [*] Fitness for individual 14  is 0.9971 on location {'S_1': '111', 'S_2': '0111100100'} . Individual's bes known performance is 0.0000 on location {'S_1': '101', 'S_2': '0001111111'}
+Crow with best location is:
+{'S_1': '011', 'S_2': '1010011010'}
+Fitness value is: 0.9977
+
+Running iteration #6...
+ [*] Fitness for individual 0  is 0.9975 on location {'S_1': '110', 'S_2': '1001111111'} . Individual's bes known performance is 0.0000 on location {'S_1': '010', 'S_2': '0001100011'}
+ [*] Fitness for individual 2  is 0.9974 on location {'S_1': '101', 'S_2': '0010111100'} . Individual's bes known performance is 0.0000 on location {'S_1': '010', 'S_2': '0110010010'}
+ [*] Fitness for individual 4  is 0.9976 on location {'S_1': '001', 'S_2': '1000011111'} . Individual's bes known performance is 0.0000 on location {'S_1': '110', 'S_2': '0001111110'}
+ [*] Fitness for individual 3  is 0.9971 on location {'S_1': '100', 'S_2': '0000110010'} . Individual's bes known performance is 0.0000 on location {'S_1': '010', 'S_2': '1111100100'}
+ [*] Fitness for individual 1  is 0.9974 on location {'S_1': '101', 'S_2': '1110001110'} . Individual's bes known performance is 0.0000 on location {'S_1': '010', 'S_2': '0101010111'}
+ [*] Fitness for individual 7  is 0.9972 on location {'S_1': '001', 'S_2': '1000001100'} . Individual's bes known performance is 0.0000 on location {'S_1': '011', 'S_2': '0100110101'}
+ [*] Fitness for individual 5  is 0.9967 on location {'S_1': '011', 'S_2': '0111110000'} . Individual's bes known performance is 0.0000 on location {'S_1': '101', 'S_2': '0111110011'}
+ [*] Fitness for individual 6  is 0.9969 on location {'S_1': '010', 'S_2': '1110011110'} . Individual's bes known performance is 0.0000 on location {'S_1': '000', 'S_2': '0111100100'}
+ [*] Fitness for individual 8  is 0.9974 on location {'S_1': '010', 'S_2': '1100000011'} . Individual's bes known performance is 0.0000 on location {'S_1': '011', 'S_2': '0011100100'}
+ [*] Fitness for individual 12  is 0.9974 on location {'S_1': '110', 'S_2': '1101010000'} . Individual's bes known performance is 0.0000 on location {'S_1': '101', 'S_2': '1000101011'}
+ [*] Fitness for individual 9  is 0.9977 on location {'S_1': '110', 'S_2': '1110000100'} . Individual's bes known performance is 0.0000 on location {'S_1': '001', 'S_2': '0011000000'}
+ [*] Fitness for individual 10  is 0.9975 on location {'S_1': '110', 'S_2': '1010000011'} . Individual's bes known performance is 0.0000 on location {'S_1': '110', 'S_2': '1110010011'}
+ [*] Fitness for individual 11  is 0.9972 on location {'S_1': '110', 'S_2': '1011111010'} . Individual's bes known performance is 0.0000 on location {'S_1': '001', 'S_2': '0100010010'}
+ [*] Fitness for individual 16  is 0.9977 on location {'S_1': '011', 'S_2': '10100101'} . Individual's bes known performance is 0.0000 on location {'S_1': '000', 'S_2': '1001111000'}
+ [*] Fitness for individual 15  is 0.9973 on location {'S_1': '001', 'S_2': '1001110011'} . Individual's bes known performance is 0.0000 on location {'S_1': '110', 'S_2': '0111000011'}
+ [*] Fitness for individual 13  is 0.9972 on location {'S_1': '011', 'S_2': '0100101100'} . Individual's bes known performance is 0.0000 on location {'S_1': '100', 'S_2': '0001100000'}
+ [*] Fitness for individual 17  is 0.9977 on location {'S_1': '000', 'S_2': '0000001010'} . Individual's bes known performance is 0.0000 on location {'S_1': '101', 'S_2': '1011111100'}
+ [*] Fitness for individual 18  is 0.9972 on location {'S_1': '100', 'S_2': '0011111010'} . Individual's bes known performance is 0.0000 on location {'S_1': '101', 'S_2': '0111110101'}
+ [*] Fitness for individual 14  is 0.9971 on location {'S_1': '100', 'S_2': '0001010001'} . Individual's bes known performance is 0.0000 on location {'S_1': '101', 'S_2': '0001111111'}
+ [*] Fitness for individual 19  is 0.9969 on location {'S_1': '101', 'S_2': '0001010011'} . Individual's bes known performance is 0.0000 on location {'S_1': '001', 'S_2': '0011111001'}
+Crow with best location is:
+{'S_1': '011', 'S_2': '10100101'}
+Fitness value is: 0.9977
+
+Running iteration #7...
+ [*] Fitness for individual 1  is 0.9974 on location {'S_1': '110', 'S_2': '1000001101'} . Individual's bes known performance is 0.0000 on location {'S_1': '010', 'S_2': '0101010111'}
+ [*] Fitness for individual 2  is 0.9969 on location {'S_1': '110', 'S_2': '1110000000'} . Individual's bes known performance is 0.0000 on location {'S_1': '010', 'S_2': '0110010010'}
+ [*] Fitness for individual 4  is 0.9977 on location {'S_1': '100', 'S_2': '1011101011'} . Individual's bes known performance is 0.0000 on location {'S_1': '110', 'S_2': '0001111110'}
+ [*] Fitness for individual 5  is 0.9969 on location {'S_1': '110', 'S_2': '1111011010'} . Individual's bes known performance is 0.0000 on location {'S_1': '101', 'S_2': '0111110011'}
+ [*] Fitness for individual 0  is 0.9970 on location {'S_1': '000', 'S_2': '1101110001'} . Individual's bes known performance is 0.0000 on location {'S_1': '010', 'S_2': '0001100011'}
+ [*] Fitness for individual 3  is 0.9970 on location {'S_1': '100', 'S_2': '0100111110'} . Individual's bes known performance is 0.0000 on location {'S_1': '010', 'S_2': '1111100100'}
+ [*] Fitness for individual 6  is 0.9975 on location {'S_1': '010', 'S_2': '1011001000'} . Individual's bes known performance is 0.0000 on location {'S_1': '000', 'S_2': '0111100100'}
+ [*] Fitness for individual 7  is 0.9971 on location {'S_1': '000', 'S_2': '0000000010'} . Individual's bes known performance is 0.0000 on location {'S_1': '011', 'S_2': '0100110101'}
+ [*] Fitness for individual 8  is 0.9974 on location {'S_1': '100', 'S_2': '0011000011'} . Individual's bes known performance is 0.0000 on location {'S_1': '011', 'S_2': '0011100100'}
+ [*] Fitness for individual 9  is 0.9972 on location {'S_1': '010', 'S_2': '1100100011'} . Individual's bes known performance is 0.0000 on location {'S_1': '001', 'S_2': '0011000000'}
+ [*] Fitness for individual 12  is 0.9972 on location {'S_1': '100', 'S_2': '0010111011'} . Individual's bes known performance is 0.0000 on location {'S_1': '101', 'S_2': '1000101011'}
+ [*] Fitness for individual 10  is 0.9975 on location {'S_1': '101', 'S_2': '0111100101'} . Individual's bes known performance is 0.0000 on location {'S_1': '110', 'S_2': '1110010011'}
+ [*] Fitness for individual 13  is 0.9973 on location {'S_1': '110', 'S_2': '1000001111'} . Individual's bes known performance is 0.0000 on location {'S_1': '100', 'S_2': '0001100000'}
+ [*] Fitness for individual 14  is 0.9976 on location {'S_1': '001', 'S_2': '0010111000'} . Individual's bes known performance is 0.0000 on location {'S_1': '101', 'S_2': '0001111111'}
+ [*] Fitness for individual 15  is 0.9970 on location {'S_1': '011', 'S_2': '0001010101'} . Individual's bes known performance is 0.0000 on location {'S_1': '110', 'S_2': '0111000011'}
+ [*] Fitness for individual 11  is 0.9972 on location {'S_1': '111', 'S_2': '0100010111'} . Individual's bes known performance is 0.0000 on location {'S_1': '001', 'S_2': '0100010010'}
+ [*] Fitness for individual 16  is 0.9971 on location {'S_1': '011', 'S_2': '0111011010'} . Individual's bes known performance is 0.0000 on location {'S_1': '000', 'S_2': '1001111000'}
+ [*] Fitness for individual 18  is 0.9972 on location {'S_1': '010', 'S_2': '0000111011'} . Individual's bes known performance is 0.0000 on location {'S_1': '101', 'S_2': '0111110101'}
+ [*] Fitness for individual 19  is 0.9972 on location {'S_1': '101', 'S_2': '1100111011'} . Individual's bes known performance is 0.0000 on location {'S_1': '001', 'S_2': '0011111001'}
+ [*] Fitness for individual 17  is 0.9973 on location {'S_1': '100', 'S_2': '1010110010'} . Individual's bes known performance is 0.0000 on location {'S_1': '101', 'S_2': '1011111100'}
+Crow with best location is:
+{'S_1': '100', 'S_2': '1011101011'}
+Fitness value is: 0.9977
+
+Running iteration #8...
+ [*] Fitness for individual 2  is 0.9974 on location {'S_1': '001', 'S_2': '0010010100'} . Individual's bes known performance is 0.0000 on location {'S_1': '010', 'S_2': '0110010010'}
+ [*] Fitness for individual 1  is 0.9971 on location {'S_1': '100', 'S_2': '1001111111'} . Individual's bes known performance is 0.0000 on location {'S_1': '010', 'S_2': '0101010111'}
+ [*] Fitness for individual 0  is 0.9975 on location {'S_1': '011', 'S_2': '01110011'} . Individual's bes known performance is 0.0000 on location {'S_1': '010', 'S_2': '0001100011'}
+ [*] Fitness for individual 3  is 0.9973 on location {'S_1': '110', 'S_2': '1010111001'} . Individual's bes known performance is 0.0000 on location {'S_1': '010', 'S_2': '1111100100'}
+ [*] Fitness for individual 4  is 0.9973 on location {'S_1': '000', 'S_2': '0011010110'} . Individual's bes known performance is 0.0000 on location {'S_1': '110', 'S_2': '0001111110'}
+ [*] Fitness for individual 5  is 0.9972 on location {'S_1': '100', 'S_2': '0100010000'} . Individual's bes known performance is 0.0000 on location {'S_1': '101', 'S_2': '0111110011'}
+ [*] Fitness for individual 6  is 0.9973 on location {'S_1': '111', 'S_2': '1100100011'} . Individual's bes known performance is 0.0000 on location {'S_1': '000', 'S_2': '0111100100'}
+ [*] Fitness for individual 7  is 0.9969 on location {'S_1': '100', 'S_2': '0110000110'} . Individual's bes known performance is 0.0000 on location {'S_1': '011', 'S_2': '0100110101'}
+ [*] Fitness for individual 8  is 0.9972 on location {'S_1': '000', 'S_2': '1000000010'} . Individual's bes known performance is 0.0000 on location {'S_1': '011', 'S_2': '0011100100'}
+ [*] Fitness for individual 9  is 0.9974 on location {'S_1': '101', 'S_2': '1100100011'} . Individual's bes known performance is 0.0000 on location {'S_1': '001', 'S_2': '0011000000'}
+ [*] Fitness for individual 10  is 0.9976 on location {'S_1': '001', 'S_2': '0100011101'} . Individual's bes known performance is 0.0000 on location {'S_1': '110', 'S_2': '1110010011'}
+ [*] Fitness for individual 15  is 0.9972 on location {'S_1': '010', 'S_2': '0100000101'} . Individual's bes known performance is 0.0000 on location {'S_1': '110', 'S_2': '0111000011'}
+ [*] Fitness for individual 16  is 0.9976 on location {'S_1': '110', 'S_2': '0101000001'} . Individual's bes known performance is 0.0000 on location {'S_1': '000', 'S_2': '1001111000'}
+ [*] Fitness for individual 17  is 0.9973 on location {'S_1': '011', 'S_2': '0011100000'} . Individual's bes known performance is 0.0000 on location {'S_1': '101', 'S_2': '1011111100'}
+ [*] Fitness for individual 18  is 0.9978 on location {'S_1': '111', 'S_2': '1111110111'} . Individual's bes known performance is 0.0000 on location {'S_1': '101', 'S_2': '0111110101'}
+ [*] Fitness for individual 12  is 0.9968 on location {'S_1': '000', 'S_2': '1011000011'} . Individual's bes known performance is 0.0000 on location {'S_1': '101', 'S_2': '1000101011'}
+ [*] Fitness for individual 19  is 0.9966 on location {'S_1': '000', 'S_2': '0010001100'} . Individual's bes known performance is 0.0000 on location {'S_1': '001', 'S_2': '0011111001'}
+ [*] Fitness for individual 13  is 0.9972 on location {'S_1': '001', 'S_2': '0100111110'} . Individual's bes known performance is 0.0000 on location {'S_1': '100', 'S_2': '0001100000'}
+ [*] Fitness for individual 14  is 0.9975 on location {'S_1': '011', 'S_2': '1100101000'} . Individual's bes known performance is 0.0000 on location {'S_1': '101', 'S_2': '0001111111'}
+ [*] Fitness for individual 11  is 0.9972 on location {'S_1': '000', 'S_2': '0010100111'} . Individual's bes known performance is 0.0000 on location {'S_1': '001', 'S_2': '0100010010'}
+Crow with best location is:
+{'S_1': '111', 'S_2': '1111110111'}
+Fitness value is: 0.9978
+
+Running iteration #9...
+ [*] Fitness for individual 1  is 0.9972 on location {'S_1': '101', 'S_2': '0001111111'} . Individual's bes known performance is 0.0000 on location {'S_1': '010', 'S_2': '0101010111'}
+ [*] Fitness for individual 0  is 0.9971 on location {'S_1': '100', 'S_2': '01111000'} . Individual's bes known performance is 0.0000 on location {'S_1': '010', 'S_2': '0001100011'}
+ [*] Fitness for individual 6  is 0.9970 on location {'S_1': '100', 'S_2': '1010101111'} . Individual's bes known performance is 0.0000 on location {'S_1': '000', 'S_2': '0111100100'}
+ [*] Fitness for individual 7  is 0.9969 on location {'S_1': '101', 'S_2': '1100000110'} . Individual's bes known performance is 0.0000 on location {'S_1': '011', 'S_2': '0100110101'}
+ [*] Fitness for individual 8  is 0.9977 on location {'S_1': '001', 'S_2': '0010101100'} . Individual's bes known performance is 0.0000 on location {'S_1': '011', 'S_2': '0011100100'}
+ [*] Fitness for individual 9  is 0.9973 on location {'S_1': '011', 'S_2': '0010000010'} . Individual's bes known performance is 0.0000 on location {'S_1': '001', 'S_2': '0011000000'}
+ [*] Fitness for individual 2  is 0.9974 on location {'S_1': '011', 'S_2': '1001111001'} . Individual's bes known performance is 0.0000 on location {'S_1': '010', 'S_2': '0110010010'}
+ [*] Fitness for individual 3  is 0.9971 on location {'S_1': '001', 'S_2': '0001011111'} . Individual's bes known performance is 0.0000 on location {'S_1': '010', 'S_2': '1111100100'}
+ [*] Fitness for individual 4  is 0.9977 on location {'S_1': '011', 'S_2': '1110110111'} . Individual's bes known performance is 0.0000 on location {'S_1': '110', 'S_2': '0001111110'}
+ [*] Fitness for individual 11  is 0.9969 on location {'S_1': '011', 'S_2': '100111'} . Individual's bes known performance is 0.0000 on location {'S_1': '001', 'S_2': '0100010010'}
+ [*] Fitness for individual 10  is 0.9973 on location {'S_1': '110', 'S_2': '0110001111'} . Individual's bes known performance is 0.0000 on location {'S_1': '110', 'S_2': '1110010011'}
+ [*] Fitness for individual 5  is 0.9973 on location {'S_1': '001', 'S_2': '0111110000'} . Individual's bes known performance is 0.0000 on location {'S_1': '101', 'S_2': '0111110011'}
+ [*] Fitness for individual 15  is 0.9969 on location {'S_1': '110', 'S_2': '0011010001'} . Individual's bes known performance is 0.0000 on location {'S_1': '110', 'S_2': '0111000011'}
+ [*] Fitness for individual 16  is 0.9976 on location {'S_1': '100', 'S_2': '1110101101'} . Individual's bes known performance is 0.0000 on location {'S_1': '000', 'S_2': '1001111000'}
+ [*] Fitness for individual 12  is 0.9972 on location {'S_1': '111', 'S_2': '0010110100'} . Individual's bes known performance is 0.0000 on location {'S_1': '101', 'S_2': '1000101011'}
+ [*] Fitness for individual 13  is 0.9974 on location {'S_1': '101', 'S_2': '0010101100'} . Individual's bes known performance is 0.0000 on location {'S_1': '100', 'S_2': '0001100000'}
+ [*] Fitness for individual 14  is 0.9978 on location {'S_1': '111', 'S_2': '1111001011'} . Individual's bes known performance is 0.0000 on location {'S_1': '101', 'S_2': '0001111111'}
+ [*] Fitness for individual 18  is 0.9971 on location {'S_1': '010', 'S_2': '0000000010'} . Individual's bes known performance is 0.0000 on location {'S_1': '101', 'S_2': '0111110101'}
+ [*] Fitness for individual 19  is 0.9974 on location {'S_1': '011', 'S_2': '0100111010'} . Individual's bes known performance is 0.0000 on location {'S_1': '001', 'S_2': '0011111001'}
+ [*] Fitness for individual 17  is 0.9968 on location {'S_1': '011', 'S_2': '0011100000'} . Individual's bes known performance is 0.0000 on location {'S_1': '101', 'S_2': '1011111100'}
+Crow with best location is:
+{'S_1': '111', 'S_2': '1111001011'}
+Fitness value is: 0.9978

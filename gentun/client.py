@@ -49,12 +49,16 @@ class GentunClient(object):
         if self.algorithm=="ga":
             individual = self.individual(self.x_train, self.y_train, genes=genes, **additional_parameters)
             fitness = individual.get_fitness()
+            # Prepare response for master and send it
+            response = json.dumps([i, fitness])
         elif self.algorithm=="csa":
             individual = self.individual(self.x_train, self.y_train, space=genes, **additional_parameters)
             fitness = individual.evaluate_fitness()
+            best_fitness = individual.get_best_fitness()
+            # Prepare response for master and send it
+            response = json.dumps([i, fitness,best_fitness])
 
-        # Prepare response for master and send it
-        response = json.dumps([i, fitness])
+
         channel.basic_publish(
             exchange='', routing_key=properties.reply_to,
             properties=pika.BasicProperties(correlation_id=properties.correlation_id), body=response
