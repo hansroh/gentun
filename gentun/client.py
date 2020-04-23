@@ -13,7 +13,7 @@ from .individuals import GeneticCnnIndividual, CrowIndividual
 import numpy as np
 class GentunClient(object):
 
-    def __init__(self, gpu, host='localhost', port=5672,
+    def __init__(self, gpu="0", x_train=None,y_train=None,host='localhost', port=5672,
                  user='guest', password='guest', rabbit_queue='rpc_queue'):
         self.gpu=gpu
         self.credentials = pika.PlainCredentials(user, password)
