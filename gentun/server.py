@@ -131,7 +131,7 @@ class DistributedPopulation(Population):
     the fittest individual.
     """
 
-    def __init__(self, species, x_train=None, y_train=None, input_shape=(28,28,1),nb_classes=10,individual_list=None, size=None,
+    def __init__(self, species, x_train=None, y_train=None, input_shape=(32,32,3),nb_classes=10,individual_list=None, size=None,
                  crossover_rate=0.5, mutation_rate=0.015, maximize=True, additional_parameters=None,
                  host='localhost', port=5672, user='test', password='test', rabbit_queue='rpc_queue'):
         super(DistributedPopulation, self).__init__(
