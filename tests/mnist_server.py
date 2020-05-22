@@ -76,9 +76,9 @@ if __name__ == '__main__':
     # individuals_list=load_individuals(3,fromdb=True)
 
     iterations = 50
-    population = 20
+    population = 4
 
-    tournament_size = 5
+    tournament_size = 4
 
     nodes = (3, 4)#, 5)
     kernels_per_layer = (20,50)#(64, 128, 256)

@@ -130,11 +130,19 @@ class GentunClient(object):
             memory = individual.get_memory()
             location = individual.get_location()
             last_location = individual.get_last_location()
-            self.system_info["device"]=individual.device
+            self.system_info["device"]=individual.gpu_device
             # Prepare response for master and send it
+
+            loss=individual.loss
+            mae=individual.mae
+            mse=individual.mse
+            msle=individual.msle
+            training_history=individual.training_history
+            epochs_history=individual.epochs_history
+            model_json=individual.model_json
             response = json.dumps(
-                [i, last_location, fitness, memory, best_fitness, location, training_time, individual.loss,
-                 individual.mae, individual.mse, individual.msle,individual.training_history,individual.epochs_history,individual.model_json,self.system_info])
+                [i, last_location, fitness, memory, best_fitness, location, training_time, loss,
+                 mae, mse, msle,training_history,epochs_history,model_json,self.system_info])
         else:
             raise Exception("Only Genetic Algorithm and Crow Search Algorithm are supported")
 
