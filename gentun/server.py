@@ -149,6 +149,7 @@ class DistributedPopulation(Population):
             species, x_train, y_train, x_test,y_test,input_shape,nb_classes,individual_list, size,
             crossover_rate, mutation_rate, maximize, additional_parameters
         )
+
         self.algo = algo
         self.dataset = dataset
         self.credentials = {
@@ -158,6 +159,7 @@ class DistributedPopulation(Population):
             'password': password,
             'rabbit_queue': rabbit_queue
         }
+
         self.exp_no = exp_no
 
     def get_fittest(self):

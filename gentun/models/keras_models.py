@@ -5,8 +5,10 @@ Machine Learning models compatible with the Genetic Algorithm implemented using 
 
 import keras.backend as K
 import numpy as np
+
 from keras.layers import Input, Conv2D, Activation, Add, MaxPooling2D, Flatten, Dense, Dropout
 from keras.optimizers import Adam
+from keras import optimizers
 from keras.models import Model
 from sklearn.model_selection import StratifiedKFold
 from keras.callbacks import EarlyStopping, ReduceLROnPlateau
@@ -38,6 +40,7 @@ class GeneticCnnModel(GentunModel):
         #     self.parallel_model = multi_gpu_model(self.model, gpus=2)
         #     print("Training using multiple GPUs..")
         # except ValueError:
+        self.model.summary()
         self.parallel_model = self.model
         print("Training using single GPU..")
 
@@ -217,23 +220,23 @@ class GeneticCnnModel(GentunModel):
         """Train model using k-fold cross validation and
         return mean value of the validation accuracy.
         """
-        early_stopper= EarlyStopping(monitor='val_acc',patience=30)
+        early_stopper= EarlyStopping(monitor='loss',patience=40, verbose=1, mode='auto', restore_best_weights=True, min_delta=0.0001)
         lr_plateau = ReduceLROnPlateau(monitor='loss', factor=0.3, patience=5, verbose=1, mode='auto',
-                                          min_delta=0.001,
-                                          cooldown=0, min_lr=0.000001)
-
+                                       min_delta=0.001,
+                                       cooldown=0, min_lr=0)
         self.reset_weights()
         print("Training {} epochs with learning rate {}".format(self.epochs, self.learning_rate))
-        self.parallel_model.compile(optimizer=Adam(lr=self.learning_rate, beta_1=0.9, beta_2=0.999, epsilon=1e-07,
-                                                   amsgrad=False), loss='binary_crossentropy',
-                                    metrics=['accuracy',metrics.mae,metrics.mse,metrics.msle])
-        training_results=self.parallel_model.fit(self.x_train, self.y_train, epochs=self.epochs, batch_size=self.batch_size,
-                                                 verbose=1,callbacks=[early_stopper, lr_plateau],validation_split=0.1)
+        # optimizer = optimizers.SGD(lr=0.0000000001, clipnorm=1.)
+        # optimizer = optimizers.RMSprop(lr=0.001, rho=0.9) # gives train_acc around 99% and val_acc aroun 90%
+        optimizer = optimizers.Adam(lr=0.001)
+        self.parallel_model.compile(optimizer=optimizer, loss='binary_crossentropy', metrics=['accuracy',metrics.mae,metrics.mse,metrics.msle])
+        training_results=self.parallel_model.fit(self.x_train, self.y_train, epochs=self.epochs, batch_size=self.batch_size, verbose=1,callbacks=[early_stopper, lr_plateau],validation_split=0.1)
         # print("Training Results",str(training_results.history))
         print ("Stopped after {} Epochs".format(len(training_results.epoch)))
         # print("Model",training_results.model.summary())
 
         results=self.parallel_model.evaluate(self.x_test, self.y_test, verbose=0)
+        print(results)
         # print(results)
         loss = results[0]
         acc = results[1]
