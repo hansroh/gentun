@@ -7,15 +7,17 @@ import keras.backend as K
 import numpy as np
 
 from keras.layers import Input, Conv2D, Activation, Add, MaxPooling2D, Flatten, Dense, Dropout
-# from keras.optimizers import Adam
+from keras.optimizers import Adam
 from keras import optimizers
 from keras.models import Model
 from sklearn.model_selection import StratifiedKFold
 from keras.callbacks import EarlyStopping, ReduceLROnPlateau
 from keras import metrics
+from tensorflow.python.client import device_lib
 # from keras.utils import multi_gpu_model
 import os
-
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
+os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"
 from .generic_models import GentunModel
 
 K.set_image_data_format('channels_last')
@@ -27,7 +29,7 @@ class GeneticCnnModel(GentunModel):
                  dropout_probability, classes, kfold=5, epochs=(3,), learning_rate=(1e-3,), batch_size=32):
         super(GeneticCnnModel, self).__init__(x_train, y_train,x_test,y_test)
         self.gpu=gpu
-        os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"
+
         os.environ["CUDA_VISIBLE_DEVICES"] = gpu
         self.model = self.build_model(
             genes, nodes, input_shape, kernels_per_layer, kernel_sizes,
@@ -54,6 +56,15 @@ class GeneticCnnModel(GentunModel):
             print(epochs, learning_rate)
             raise ValueError("epochs and learning_rate must be both either integers or tuples of integers.")
         self.batch_size = batch_size
+
+        devices = device_lib.list_local_devices()
+        for device in devices:
+            if device.device_type == "GPU":
+                device_attr = device.physical_device_desc.split(",")
+                if gpu in device_attr[0].split(":")[1]:
+                    self.gpu_name = device_attr[1].split(":")[1]
+
+
 
     def plot(self):
         """Draw model to validate gene-to-DAG."""
@@ -233,6 +244,6 @@ class GeneticCnnModel(GentunModel):
         mse = results[3]
         msle = results[4]
         K.clear_session()
-        return loss, acc, mae, mse, msle,training_results.history,training_results.epoch,training_results.model.to_json()
+        return loss, acc, mae, mse, msle,training_results.history,training_results.epoch,training_results.model.to_json(),self.gpu
 
 
